@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+b,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 400;
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moveout {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-20deg);
+  }
+}
+@keyframes movein {
+  0% {
+    transform: rotateZ(-20deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+.rotate {
+  animation: circle 20s infinite linear;
+}
+.moveout {
+  animation: moveout 0.5s  linear;
+}
+.movein {
+  animation: movein 0.5s  linear;
+}
+body .page {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+body .page .cover-back {
+  position: absolute;
+  background-image: url(img/cover-back.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: 50%;
+  transform: scale(1.5);
+  transform-origin: center top;
+}
+body .page .cover-back:after {
+  content: " ";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+body .page .phonograph {
+  position: relative;
+  height: 311px;
+}
+body .page .phonograph .play {
+  background-image: url(img/play.png);
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: 162px;
+}
+body .page .phonograph .needle {
+  position: absolute;
+  width: 84px;
+  left: 50%;
+  margin-left: -18px;
+  transform-origin: 10% 0 0;
+  animation-fill-mode: forwards;
+}
+body .page .phonograph .disc_light {
+  position: absolute;
+  width: 248px;
+  margin-top: 63px;
+  left: 50%;
+  margin-left: -124px;
+  animation: circle 20s infinite linear;
+}
+body .page .phonograph .disc {
+  position: absolute;
+  width: 248px;
+  margin-top: 63px;
+  left: 50%;
+  margin-left: -124px;
+}
+body .page .phonograph .cover {
+  width: 150px;
+  position: absolute;
+  left: 50%;
+  margin-top: 112px;
+  margin-left: -75px;
+  border-radius: 50%;
+  animation: circle 20s infinite linear;
+}
+body .page .song-information {
+  padding: 0 35px;
+  margin-top: 25px;
+  position: absolute;
+  text-align: center;
+  color: #fefefe;
+  width: 320px;
+}
+body .page .song-information .song-head {
+  line-height: 1.1;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+body .page .song-information .song-head .gap {
+  margin: 0 4px;
+}
+body .page .song-information .song-head .auther {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+}
+body .page .song-information .lyric {
+  margin-top: 14px;
+}
+body .page .footer {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  padding: 0 35px;
+}
+body .page .footer span {
+  width: 119px;
+  height: 36px;
+  text-align: center;
+  border: 1px solid #d43b32;
+  line-height: 34px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+body .page .footer .open {
+  color: #d43b32;
+}
+body .page .footer .download {
+  background: #d43b32;
+  color: #fff;
+  margin-left: 12px;
+}
