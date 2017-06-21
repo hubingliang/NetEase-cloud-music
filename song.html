@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="song.css">
+    <link rel="stylesheet" href="song2.css">
 
     <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        var width = document.documentElement.clientWidth
+        console.log(width)
+        var css = `
+    html{
+      font-size: ${width}px;
+    }
+    `
+        document.write(`<style>${css}</style>`)
+    </script>
 </head>
 
 <body>
