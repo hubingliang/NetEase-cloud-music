@@ -1,5 +1,5 @@
 let audio = document.createElement('audio')
-audio.src = 'http://dl.stream.qqmusic.qq.com/C1L00030AmKd2gIrYj.m4a?fromtag=38'
+audio.src = '//dl.stream.qqmusic.qq.com/C1L00030AmKd2gIrYj.m4a?fromtag=38'
 audio.oncanplay = function() {
     audio.play()
     $('#play').css('display', 'none')
