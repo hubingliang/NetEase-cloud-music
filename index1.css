@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body .top-bar {
+  background: #d23c33;
+}
+body .top-bar .topsvg {
+  width: 135px;
+}

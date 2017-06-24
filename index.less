@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    color: #333;
+}
+h2{
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+:after{
+}
+.tab{
+    width: 33.3333%;
+    text-align: center;
+    height: 100%;
+}
+.selected{
+    color: #d33a31;
+    &:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        z-index: 3;
+        width: 100%;
+        height: 4px;
+        transform: scaleY(.5);
+        background: #d33a31;
+    }
+}
+
+body{
+    .top-bar{
+        background: rgb(210, 60, 51);
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        width: 100%;
+        height: 64px;
+        z-index: 100;
+        .topsvg{
+            width: 142px;
+        }
+        .downloadApp{
+            height: 30px;
+            line-height: 30px;
+            padding: 0 10px;
+            color: #fff;
+            font-size: 15px;
+            border: 0.8px solid  #fff;
+            border-radius: 15px; 
+        }
+    }
+    .main{
+        margin-top: 64px;
+        padding-top: 40px;
+        .nav{
+            position: fixed;
+            top: 64px;
+            display: flex;
+            width: 100vw;
+            height: 40px;
+            font-size: 15px;
+            z-index: 100;
+            background: #fff;
+            border-bottom-width: 1px;
+            border: 0 solid rgba(0,0,0,.1);
+            border-bottom-width: 1px;
+            .tabName{
+                position: relative;
+                display: inline-block;
+                height: 100%;
+                padding: 0 5px;
+                box-sizing: border-box;
+                font-size: 15px;
+                line-height: 40px;
+            }
+        }
+        .content{
+            .tabitem{
+                .recommend{
+                    padding-top: 20px;
+                    .recommend-title{
+                        position: relative;
+                        padding-left: 9px;
+                        margin-bottom: 14px;
+                        font-size: 17px;
+                        height: 20px;
+                        line-height: 20px;
+                            &:after{
+                            content: " ";
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            margin-top: -9px;
+                            width: 2px;
+                            height: 16px;
+                            background-color: #d33a31;
+                            }
+                    }
+                    .recommend-list{
+                        padding-bottom: 24px;
+                        .recommend-song{
+                            display: flex;
+                            padding-bottom: 16px;
+                            a{
+                                display: block;
+                                -webkit-box-flex: 1;
+                                flex: 1 1 auto;
+                                width: 1%;
+                                margin-right: 3px;
+                                width: 104.6666px;
+                                color: #333;
+                                p{
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                    overflow: hidden;
+                                    padding: 1px 2px 0 6px;
+                                    line-height: 1.2;
+                                    font-size: 13px;
+                                }
+                                .recommend-img{
+                                    position: relative;
+                                    img{
+                                        width: 100%;
+                                    }
+                                    span{
+                                        position: absolute;
+                                        right: 5px;
+                                        top: 2px;
+                                        z-index: 3;
+                                        padding-left: 13px;
+                                        color: #fff;
+                                        font-size: 12px;
+                                        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMiAyMCI+PGcgb3BhY2l0eT0iLjE1Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMwNDAwMDAiIGQ9Im0yMiAxNi43NzdjMCAxLjIzMy0xLjEyMSAyLjIzMy0yLjUwNiAyLjIzMy0xLjM4NCAwLTIuNTA2LTEtMi41MDYtMi4yMzN2LTIuNTUzYzAtMS4yMzQgMS4xMjItMi4yMzMgMi41MDYtMi4yMzMuMTc0IDAgLjM0My4wMTcuNTA2LjA0NnYtMS4zN2gtLjAzM2MuMDE3LS4yMi4wMzMtLjQ0MS4wMzMtLjY2NiAwLTQuNDE4LTMuNTgyLTgtOC04LTQuNDE4IDAtOCAzLjU4Mi04IDggMCAuMjI1LjAxNi40NDYuMDM0LjY2NmgtLjAzNHYxLjM3Yy4xNjMtLjAyOS4zMzMtLjA0Ni41MDUtLjA0NiAxLjM4NCAwIDIuNTA2Ljk5OSAyLjUwNiAyLjIzM3YyLjU1M2MwIDEuMjMzLTEuMTIyIDIuMjMzLTIuNTA2IDIuMjMzcy0yLjUwNS0uOTk5LTIuNTA1LTIuMjMzdi0yLjU1M2MwLS4yNTguMDU5LS41MDEuMTQ4LS43My0uMDg1LS4xNDgtLjE0OC0uMzEtLjE0OC0uNDkzdi0yLjY2N2MwLS4wMjMuMDEyLS4wNDMuMDEzLS4wNjctLjAwNC0uMDg4LS4wMTMtLjE3Ni0uMDEzLS4yNjYgMC01LjUyMyA0LjQ3Ny0xMCAxMC0xMCA1LjUyMyAwIDEwIDQuNDc3IDEwIDEwIDAgLjA5LS4wMDkuMTc4LS4wMTQuMjY2LjAwMi4wMjQuMDE0LjA0NC4wMTQuMDY3djJjMCAuMzA2LS4xNDUuNTY5LS4zNi43NTMuMjI0LjMzNC4zNi43Mi4zNiAxLjEzOHYyLjU1MiIvPjwvZz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiNmZmYiIGQ9Im0yMCAxNi43NzdjMCAxLjIzMy0xLjEyMSAyLjIzMy0yLjUwNiAyLjIzMy0xLjM4NCAwLTIuNTA2LTEtMi41MDYtMi4yMzN2LTIuNTUzYzAtMS4yMzQgMS4xMjItMi4yMzMgMi41MDYtMi4yMzMuMTc0IDAgLjM0My4wMTcuNTA2LjA0NnYtMS4zN2gtLjAzM2MuMDE3LS4yMi4wMzMtLjQ0MS4wMzMtLjY2NiAwLTQuNDE4LTMuNTgyLTgtOC04LTQuNDE4IDAtOCAzLjU4Mi04IDggMCAuMjI1LjAxNi40NDYuMDM0LjY2NmgtLjAzNHYxLjM3Yy4xNjMtLjAyOS4zMzMtLjA0Ni41MDUtLjA0NiAxLjM4NCAwIDIuNTA2Ljk5OSAyLjUwNiAyLjIzM3YyLjU1M2MwIDEuMjMzLTEuMTIyIDIuMjMzLTIuNTA2IDIuMjMzcy0yLjUwNS0uOTk5LTIuNTA1LTIuMjMzdi0yLjU1M2MwLS4yNTguMDU5LS41MDEuMTQ4LS43My0uMDg1LS4xNDgtLjE0OC0uMzEtLjE0OC0uNDkzdi0yLjY2N2MwLS4wMjMuMDEyLS4wNDMuMDEzLS4wNjctLjAwNC0uMDg4LS4wMTMtLjE3Ni0uMDEzLS4yNjYgMC01LjUyMyA0LjQ3Ny0xMCAxMC0xMCA1LjUyMyAwIDEwIDQuNDc3IDEwIDEwIDAgLjA5LS4wMDkuMTc4LS4wMTQuMjY2LjAwMi4wMjQuMDE0LjA0NC4wMTQuMDY3djJjMCAuMzA2LS4xNDUuNTY5LS4zNi43NTMuMjI0LjMzNC4zNi43Mi4zNiAxLjEzOHYyLjU1MiIvPjwvc3ZnPg==) 0 no-repeat;
+                                        background-size: 11px 10px;
+                                        text-shadow: 1px 0 0 rgba(0,0,0,.15);
+                                    }
+                                    &:after{
+                                        content: " ";
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        width: 100%;
+                                        height: 20px;
+                                        z-index: 2;
+                                        background-image: linear-gradient(180deg,rgba(0,0,0,.2),transparent);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .new-music{
+                        .music-list{
+                            a{
+                                padding-left: 10px;
+                                display: block;
+                                height: 54.4px;
+                                .items{
+                                    display: flex;
+                                    .left{
+                                        flex: 1;
+                                        .name{
+                                            font-size: 17px;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                        }
+                                        .author{
+                                            color: #888;
+                                            font-size: 12px;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                        }
+                                    }
+                                    .right{
+                                        display: flex;
+                                        align-items: center;
+                                        padding: 0 10px;
+                                        span{
+                                            display: flex;
+                                            align-items: center;
+                                            padding: 0 10px;
+                                            width: 22px;
+                                            height: 22px;
+                                            background: url(index-img/s.png) no-repeat;
+                                            background-position: -24px 0;
+                                            background-size: 166px 97px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    footer{
+                        position: relative;
+                        padding-top: 53.3%;
+                        margin-top: 4px;
+                        background: url(index-img/crowd.png) no-repeat;
+                        background-size: contain;
+                        .wrap{
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            top: 0;
+                            z-index: 1;
+                            text-align: center;
+                            .logo{
+                                padding-top: 12%;
+                                text-align: center;
+                                svg{
+                                    display: block;
+                                    margin: 0 auto;
+                                    width: 230px;
+                                    height: 44px;
+                                }
+                            }
+                            .openApp{
+                                line-height: 38px;
+                                border: 1px solid #d33a31;
+                                border-radius: 38px;
+                                font-size: 16px;
+                                color: #d33a31;
+                                margin: 15px 37px 5px;
+                            }
+                            .copyright{
+                                color: #888;
+                                font-size: 12px;
+                                line-height: 16px;
+                                transform: scale(.75);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
