@@ -41,6 +41,9 @@ strong {
 .rotate {
   animation: circle 20s infinite linear;
 }
+.norotate {
+  animation-play-state: paused;
+}
 .moveout {
   animation: moveout 0.5s  linear;
 }
@@ -60,7 +63,6 @@ body .page .cover-back {
   background-image: url(img/cover-back.jpg);
   width: 100%;
   height: 100%;
-  background-position: 50%;
   transform: scale(1.5);
   transform-origin: center top;
 }
@@ -95,6 +97,8 @@ body .page .phonograph .needle {
   margin-left: -18px;
   transform-origin: 10% 0 0;
   animation-fill-mode: forwards;
+  transform: rotateZ(-20deg);
+  top: -2px;
 }
 body .page .phonograph .disc_light {
   position: absolute;
@@ -102,8 +106,6 @@ body .page .phonograph .disc_light {
   margin-top: 63px;
   left: 50%;
   margin-left: -124px;
-  animation-play-state: paused;
-  animation: circle 20s infinite linear;
 }
 body .page .phonograph .disc {
   position: absolute;
@@ -119,8 +121,6 @@ body .page .phonograph .cover {
   margin-top: 112px;
   margin-left: -75px;
   border-radius: 50%;
-  animation-play-state: paused;
-  animation: circle 20s infinite linear;
 }
 body .page .song-information {
   padding: 0 35px;
