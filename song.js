@@ -1,9 +1,10 @@
 let audio = document.createElement('audio')
-audio.src = 'http://os5560mkh.bkt.clouddn.com/Timbo%20Mehrstein%20Gypsy%20Jazz%20Ensemble%20-%20Pour%20Toi.mp3'
-audio.play()
+audio.src = 'http://os55j7nsx.bkt.clouddn.com/Timbo%20Mehrstein%20Gypsy%20Jazz%20Ensemble%20-%20Pour%20Toi.mp3'
 audio.oncanplay = function() {
     audio.play()
     $('#play').css('display', 'none')
+    $('.cover').css('animation-play-state', '')
+    $('.disc_light').css('animation-play-state', '')
 }
 $('#cover').on('touchstart', function() {
     audio.pause()

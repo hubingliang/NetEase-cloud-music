@@ -40,6 +40,7 @@ b, em, h1, h2, h3, h4, h5, h6, strong {
     animation:  movein 0.5s  linear;
 }
 body{
+    font-size: 16px;
     .page{
         height: 100vh;
         position: relative;
@@ -78,6 +79,7 @@ body{
             }
             .needle{
                 position: absolute;
+                top: -2px;
                 width: 84px;
                 left: 50%;
                 margin-left: -18px;
@@ -90,7 +92,9 @@ body{
                 margin-top: 63px; 
                 left: 50%;
                 margin-left: -124px;
+                animation-play-state: paused;
                 .rotate
+
             }
             .disc{
                 position: absolute;
@@ -106,6 +110,7 @@ body{
                 margin-top: 112px;
                 margin-left: -75px;
                 border-radius: 50%;
+                animation-play-state: paused;
                 .rotate
             }
         }

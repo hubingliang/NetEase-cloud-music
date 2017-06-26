@@ -47,6 +47,9 @@ strong {
 .movein {
   animation: movein 0.5s  linear;
 }
+body {
+  font-size: 16px;
+}
 body .page {
   height: 100vh;
   position: relative;
@@ -87,6 +90,7 @@ body .page .phonograph .play {
 }
 body .page .phonograph .needle {
   position: absolute;
+  top: -2px;
   width: 84px;
   left: 50%;
   margin-left: -18px;
@@ -99,6 +103,7 @@ body .page .phonograph .disc_light {
   margin-top: 63px;
   left: 50%;
   margin-left: -124px;
+  animation-play-state: paused;
   animation: circle 20s infinite linear;
 }
 body .page .phonograph .disc {
@@ -115,6 +120,7 @@ body .page .phonograph .cover {
   margin-top: 112px;
   margin-left: -75px;
   border-radius: 50%;
+  animation-play-state: paused;
   animation: circle 20s infinite linear;
 }
 body .page .song-information {

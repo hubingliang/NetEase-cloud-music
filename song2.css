@@ -56,7 +56,7 @@ strong {
 }
 
 body {
-    font-size: 16px;
+    font-size: 0.05rem;
 }
 
 body .page {
@@ -73,8 +73,6 @@ body .page .cover-back {
     background-position: 50%;
     transform: scale(1.5);
     transform-origin: center top;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
 }
 
 body .page .cover-back:after {
@@ -106,6 +104,7 @@ body .page .phonograph .play {
 
 body .page .phonograph .needle {
     position: absolute;
+    top: -0.00625rem;
     width: 0.2625rem;
     left: 50%;
     margin-left: -0.05625rem;
@@ -119,6 +118,7 @@ body .page .phonograph .disc_light {
     margin-top: 0.19688rem;
     left: 50%;
     margin-left: -0.3875rem;
+    animation-play-state: paused;
     animation: circle 20s infinite linear;
 }
 
@@ -137,6 +137,7 @@ body .page .phonograph .cover {
     margin-top: 0.35rem;
     margin-left: -0.23438rem;
     border-radius: 50%;
+    animation-play-state: paused;
     animation: circle 20s infinite linear;
 }
 
