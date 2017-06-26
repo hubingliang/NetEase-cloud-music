@@ -1,5 +1,5 @@
 let audio = document.createElement('audio')
-audio.src = '//dl.stream.qqmusic.qq.com/C1L00030AmKd2gIrYj.m4a?fromtag=38'
+audio.src = 'https://os5560mkh.bkt.clouddn.com/Timbo%20Mehrstein%20Gypsy%20Jazz%20Ensemble%20-%20Pour%20Toi.mp3'
 audio.play()
 audio.oncanplay = function() {
     audio.play()
@@ -23,20 +23,6 @@ $('#play').on('touchstart', function() {
     $('.needle').addClass('movein')
 
 })
-
-
-
-
-
-
-
-let cover = $('.cover')
-let deg = 0
-let rotate = function() {
-    deg = deg + 1.8
-    cover.css('transform', `rotateZ(${deg}deg)`)
+window.onerror = function() {
+    alert(arguments)
 }
-let coverRotate = setInterval(function() {
-    deg = deg + 1.8
-    cover.css('transform', `rotateZ(${deg}deg)`)
-}, 100)
