@@ -1,5 +1,6 @@
 let audio = document.createElement('audio')
 audio.src = 'http://os55j7nsx.bkt.clouddn.com/Timbo%20Mehrstein%20Gypsy%20Jazz%20Ensemble%20-%20Pour%20Toi.mp3'
+audio.play()
 audio.oncanplay = function() {
     audio.play()
     $('#play').css('display', 'none')
