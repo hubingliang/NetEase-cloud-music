@@ -20,7 +20,7 @@ $('#play').on('touchstart', function() {
 })
 
 $(function() {
-    $.get('/song.json').then(function(object) {
+    $.get('/songs.json').then(function(object) {
         console.log(object)
         let { lyric } = object
         let array = lyric.split('\n')
