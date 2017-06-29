@@ -8,7 +8,7 @@
                         <div class="items">
                             <div class="left">
                                 <p class="name">${i.name}</p>
-                                <p class="author">Sean Hayes - Run Wolves Run</p>
+                                <p class="author">${i.author} - ${i.album}</p>
                             </div>
                             <div class="right">
                                 <span></span>
