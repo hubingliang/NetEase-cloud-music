@@ -171,6 +171,7 @@ body .main .content .tabitem .recommend .new-music .music-list a {
 }
 body .main .content .tabitem .recommend .new-music .music-list a .items {
   display: flex;
+  width: 100%;
 }
 body .main .content .tabitem .recommend .new-music .music-list a .items .left {
   flex: 1;
