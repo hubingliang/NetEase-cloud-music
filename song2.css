@@ -163,7 +163,7 @@ body .page .song-information .song-head .gap {
     margin: 0 0.0125rem;
 }
 
-body .page .song-information .song-head .auther {
+body .page .song-information .song-head .author {
     font-size: 0.04063rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.6);
@@ -171,6 +171,9 @@ body .page .song-information .song-head .auther {
 
 body .page .song-information .lyric {
     margin-top: 0.04375rem;
+    font-size: 0.04063rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 body .page .footer {

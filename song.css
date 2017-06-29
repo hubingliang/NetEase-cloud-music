@@ -141,13 +141,16 @@ body .page .song-information .song-head {
 body .page .song-information .song-head .gap {
   margin: 0 4px;
 }
-body .page .song-information .song-head .auther {
+body .page .song-information .song-head .author {
   font-size: 13px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.6);
 }
 body .page .song-information .lyric {
   margin-top: 14px;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
 }
 body .page .footer {
   position: absolute;
