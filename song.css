@@ -151,6 +151,12 @@ body .page .song-information .lyric {
   font-size: 13px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.6);
+  height: 60px;
+  overflow: hidden;
+}
+body .page .song-information .lyric p {
+  height: 19.2px;
+  padding-bottom: 5px;
 }
 body .page .footer {
   position: absolute;
