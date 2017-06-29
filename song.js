@@ -21,7 +21,7 @@ $('#play').on('touchstart', function() {
 
 $(function() {
     $.get('songs.json').then(function(object) {
-        let { lyric } = object[0].lyric
+        let { lyric } = object[0]
         let array = lyric.split('\n')
         console.log(array)
         let regex = /^\[(.+)\](.*)$/
