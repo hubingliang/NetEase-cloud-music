@@ -166,6 +166,7 @@ body .main .content .tabitem .recommend .new-music .music-list a {
   border-top-width: 1px;
   display: flex;
   align-items: center;
+  margin-top: -1px;
 }
 body .main .content .tabitem .recommend .new-music .music-list a .items {
   display: flex;
