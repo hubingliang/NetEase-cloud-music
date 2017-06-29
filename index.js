@@ -4,15 +4,17 @@
          items.forEach(i => {
              let $li = $(
                  `
-					<li>
-					<a href="./song.html?id=${i.id}">
-					<h3>${i.name}</h3>
-					<p>演唱者-专辑</p>
-					<svg class="play">
-					<use xlink:href="#icon-play-circled"></use>
-					</svg>
-					</a>
-					</li>
+                <a href="./song.html?id=${i.id}">
+                        <div class="items">
+                            <div class="left">
+                                <p class="name">${i.name}</p>
+                                <p class="author">Sean Hayes - Run Wolves Run</p>
+                            </div>
+                            <div class="right">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
 					`
              )
              $('#lastestMusic').append($li)
