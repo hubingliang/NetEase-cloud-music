@@ -89,10 +89,12 @@ body .main .content .tabitem .recommend {
 body .main .content .tabitem .recommend .recommend-title {
   position: relative;
   padding-left: 9px;
-  margin-bottom: 14px;
+  padding-bottom: 14px;
   font-size: 17px;
   height: 20px;
   line-height: 20px;
+  border: 0 solid rgba(0, 0, 0, 0.1);
+  border-bottom-width: 1px;
 }
 body .main .content .tabitem .recommend .recommend-title:after {
   content: " ";
@@ -163,7 +165,6 @@ body .main .content .tabitem .recommend .new-music .music-list a {
   height: 54.4px;
   border: 0 solid rgba(0, 0, 0, 0.1);
   border-bottom-width: 1px;
-  border-top-width: 1px;
   display: flex;
   align-items: center;
   margin-top: -1px;
