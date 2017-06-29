@@ -106,6 +106,11 @@ body .main .content .tabitem .recommend .recommend-title:after {
   height: 16px;
   background-color: #d33a31;
 }
+body .main .content .tabitem .recommend .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 body .main .content .tabitem .recommend .recommend-list {
   padding-bottom: 24px;
 }
