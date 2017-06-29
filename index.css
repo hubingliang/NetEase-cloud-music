@@ -161,6 +161,11 @@ body .main .content .tabitem .recommend .new-music .music-list a {
   padding-left: 10px;
   display: block;
   height: 54.4px;
+  border: 0 solid rgba(0, 0, 0, 0.1);
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  display: flex;
+  align-items: center;
 }
 body .main .content .tabitem .recommend .new-music .music-list a .items {
   display: flex;
