@@ -23,6 +23,7 @@ $(function() {
     $.get('songs.json').then(function(object) {
         let { lyric } = object[0].lyric
         let array = lyric.split('\n')
+        console.log(array)
         let regex = /^\[(.+)\](.*)$/
         array = array.map(function(string, index) {
             let matches = string.match(regex)
