@@ -1,5 +1,5 @@
 let audio = document.createElement('audio')
-audio.src = '//os55j7nsx.bkt.clouddn.com/Timbo%20Mehrstein%20Gypsy%20Jazz%20Ensemble%20-%20Pour%20Toi.mp3'
+audio.src = 'http://ac-3k2xcvwp.clouddn.com/f9b1df94c63d4d10b004.mp3'
 $('#cover').on('touchstart', function() {
     audio.pause()
     $('.cover').addClass('norotate')
@@ -18,6 +18,24 @@ $('#play').on('touchstart', function() {
     $('.needle').addClass('movein')
 
 })
-window.onerror = function() {
-    alert(arguments)
-}
+
+$(function() {
+    $.get('/song.json').then(function(object) {
+        console.log(object)
+        let { lyric } = object
+        let array = lyric.split('\n')
+        let regex = /^\[(.+)\](.*)$/
+        array = array.map(function(string, index) {
+            let matches = string.match(regex)
+            if (matches) {
+                return { time: matches[1], words: matches[2] }
+            }
+        })
+        let $lyric = $(".lyric")
+        array.map(function(object) {
+            let $p = $('</p>')
+            $p.attr('data-time', object.time).text(object.words)
+            $p.appendTo($lyric)
+        })
+    })
+})
