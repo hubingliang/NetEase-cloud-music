@@ -25,6 +25,7 @@ $(function() {
         let left = seconds - munites * 60
         let time = `${pad(munites)}:${pad(left)}`
         let $lyric = $('.lyric> p')
+        console.log($lyric)
         let $whichLine
         for (let i = 0; i < $lyric.length; i++) {
             let currentLineTime = $lyric.eq(i).attr('data-time')
