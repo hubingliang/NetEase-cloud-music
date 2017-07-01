@@ -59,7 +59,6 @@ $(function() {
         let $lyric = $(".lyric")
         array.map(function(object) {
             let $p = $('</p>')
-            console.log(object)
             $p.attr('data-time', object.time).text(object.words)
             $p.appendTo($lyric)
         })
