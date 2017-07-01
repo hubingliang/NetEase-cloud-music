@@ -183,7 +183,7 @@ body .page .song-information .lyric {
 }
 
 body .page .song-information .lyric .lyric-box {
-    transform: scaleY(0.06rem);
+    transition: transform 0.3s;
 }
 
 body .page .song-information .lyric .lyric-box p {
