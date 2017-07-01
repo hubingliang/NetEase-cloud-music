@@ -30,6 +30,9 @@ b, em, h1, h2, h3, h4, h5, h6, strong {
         transform: rotateZ(0deg); 
     } 
 }
+.active {
+    color: #fefefe;
+}
 .rotate{
     animation: circle 20s infinite linear; 
 }
@@ -144,12 +147,16 @@ body{
                 font-size: 13px;
                 font-weight: 400;
                 color: hsla(0,0%,100%,.6);
-                height: 60px;
+                height: 58px;
                 overflow: hidden;
-                p{
-                    height: 19.2px;
-                    padding-bottom: 5px;
+                .lyric-box{
+                    transform: scaleY(0.06rem);
+                    p{
+                        height: 19.2px;
+                        padding-bottom: 5px;
+                    }
                 }
+
             }
         }
         .footer{

@@ -38,6 +38,9 @@ strong {
     transform: rotateZ(0deg);
   }
 }
+.active {
+  color: #fefefe;
+}
 .rotate {
   animation: circle 20s infinite linear;
 }
@@ -151,10 +154,13 @@ body .page .song-information .lyric {
   font-size: 13px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.6);
-  height: 60px;
+  height: 58px;
   overflow: hidden;
 }
-body .page .song-information .lyric p {
+body .page .song-information .lyric .lyric-box {
+  transform: scaleY(0.06rem);
+}
+body .page .song-information .lyric .lyric-box p {
   height: 19.2px;
   padding-bottom: 5px;
 }

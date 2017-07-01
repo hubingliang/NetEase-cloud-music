@@ -178,11 +178,15 @@ body .page .song-information .lyric {
     font-size: 0.04063rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.6);
-    height: 0.1875rem;
+    height: 0.18125rem;
     overflow: hidden;
 }
 
-body .page .song-information .lyric p {
+body .page .song-information .lyric .lyric-box {
+    transform: scaleY(0.06rem);
+}
+
+body .page .song-information .lyric .lyric-box p {
     height: 0.06rem;
     padding-bottom: 0.01563rem;
 }

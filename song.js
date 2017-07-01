@@ -38,7 +38,7 @@ $(function() {
         if ($whichLine) {
             $whichLine.addClass('active').prev().removeClass('active')
             let height = $('.lyric>.lyric-box>p').innerHeight()
-            console.log(height)
+            let totalheight = 0
             $('.lyric-box').css('transform', `translateY(-${height}px)`)
         }
 
