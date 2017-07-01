@@ -24,20 +24,22 @@ $(function() {
         let munites = ~~(seconds / 60)
         let left = seconds - munites * 60
         let time = `${pad(munites)}:${pad(left)}`
-        let $lyric = $('.lyric> p')
+        let $lyric = $('.lyric>.lyric-box')
         console.log($lyric)
         let $whichLine
         for (let i = 0; i < $lyric.length; i++) {
             let currentLineTime = $lyric.eq(i).attr('data-time')
             let nextLineTime = $lyric.eq(i + 1).attr('data-time')
+            if ($lines.eq(i + 1).length !== 0 && currentLineTime < time && nextLineTime > time) {
+                $whichLine = $lines.eq(i)
+                break
+            }
+            if ($whichLine) {
+                let height = $('.lyric>.lyric-box>p').height()
+                $('.lyric').css('transform', `translateY(-${height}px)`)
+            }
         }
-        if ($whichLine) {
-            $whichLine.addClass('active').prev().removeClass('active')
-            let top = $whichLine.offset().top
-            let lyricTop = $('.lyric').offset().top
-            let delta = top - lyricTop - $('.lyric').height() / 3
-            $('.lyric').css('transform', `translateY(-${delta}px)`)
-        }
+
     }, 300)
 
     function pad(number) {
