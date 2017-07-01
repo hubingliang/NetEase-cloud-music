@@ -32,11 +32,13 @@ $(function() {
             let currentLineTime = $lyric.eq(i).attr('data-time')
             let nextLineTime = $lyric.eq(i + 1).attr('data-time')
             if ($lyric.eq(i + 1).length !== 0 && currentLineTime < time && nextLineTime > time) {
-                goon = $whichLine
+                goon = i
                 $whichLine = $lyric.eq(i)
                 break
             }
         }
+        console.log(i)
+        console.log(goon)
         if ($whichLine && goon !== $whichLine) {
             $whichLine.addClass('active').prev().removeClass('active')
             let height = $('.lyric>.lyric-box>p').innerHeight()
