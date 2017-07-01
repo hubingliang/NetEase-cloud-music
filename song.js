@@ -1,6 +1,6 @@
 $(function() {
     let audio = document.createElement('audio')
-    audio.src = 'http://ac-3k2xcvwp.clouddn.com/f9b1df94c63d4d10b004.mp3'
+    audio.src = '//dl.stream.qqmusic.qq.com/C400000t3PX00d53oD.m4a?vkey=EBF64FD3BE7C38CBEEE90E19890CCCFC2B1036D2FC146C78DC8BB9AD5544A6A991396DAAB29334806AA7D31A1FCA2F38C0EEBBE9112B69B5&guid=7561507023&uin=1104524352&fromtag=66'
     $('#cover').on('touchstart', function() {
         audio.pause()
         $('.cover').addClass('norotate')
