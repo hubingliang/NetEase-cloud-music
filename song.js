@@ -38,6 +38,7 @@ $(function() {
         if ($whichLine) {
             $whichLine.addClass('active').prev().removeClass('active')
             let height = $('.lyric>.lyric-box>p').height()
+            console.log(height)
             $('.lyric-box').css('transform', `translateY(-${height}px)`)
         }
 
