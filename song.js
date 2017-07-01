@@ -28,11 +28,7 @@ $(function() {
         let $whichLine
         for (let i = 0; i < $lyric.length; i++) {
             let currentLineTime = $lyric.eq(i).attr('data-time')
-            console.log('currentLineTime')
-            console.log(currentLineTime)
             let nextLineTime = $lyric.eq(i + 1).attr('data-time')
-            console.log('nextLineTime')
-            console.log(nextLineTime)
             if ($lyric.eq(i + 1).length !== 0 && currentLineTime < time && nextLineTime > time) {
                 $whichLine = $lyric.eq(i)
                 break
