@@ -30,8 +30,8 @@ $(function() {
         for (let i = 0; i < $lyric.length; i++) {
             let currentLineTime = $lyric.eq(i).attr('data-time')
             let nextLineTime = $lyric.eq(i + 1).attr('data-time')
-            if ($lines.eq(i + 1).length !== 0 && currentLineTime < time && nextLineTime > time) {
-                $whichLine = $lines.eq(i)
+            if ($lyric.eq(i + 1).length !== 0 && currentLineTime < time && nextLineTime > time) {
+                $whichLine = $lyric.eq(i)
                 break
             }
             if ($whichLine) {
