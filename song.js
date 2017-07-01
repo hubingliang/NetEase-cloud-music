@@ -47,7 +47,7 @@ $(function() {
         return number >= 10 ? number + '' : '0' + number
     }
     $.get('songs.json').then(function(object) {
-        let { lyric } = object[0]
+        let { lyric } = object[5]
         let array = lyric.split('\n')
         let regex = /^\[(.+)\](.*)$/
         array = array.map(function(string, index) {
