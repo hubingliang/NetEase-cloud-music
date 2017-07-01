@@ -37,10 +37,10 @@ $(function() {
                 $whichLine = $lyric.eq(i)
                 break
             }
-            if ($whichLine) {
-                let height = $('.lyric>.lyric-box>p').height()
-                $('.lyric-box').css('transform', `translateY(-${height}px)`)
-            }
+        }
+        if ($whichLine) {
+            let height = $('.lyric>.lyric-box>p').height()
+            $('.lyric-box').css('transform', `translateY(-${height}px)`)
         }
 
     }, 300)
