@@ -37,7 +37,6 @@ $(function() {
                 break
             }
         }
-        console.log(i)
         console.log(goon)
         if ($whichLine && goon !== $whichLine) {
             $whichLine.addClass('active').prev().removeClass('active')
