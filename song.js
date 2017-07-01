@@ -19,7 +19,6 @@ $(function() {
         $('.needle').addClass('movein')
 
     })
-    let totalheight = 0
     setInterval(() => {
         let seconds = audio.currentTime
         let munites = ~~(seconds / 60)
@@ -37,9 +36,10 @@ $(function() {
         }
         if ($whichLine) {
             $whichLine.addClass('active').prev().removeClass('active')
-            let height = $('.lyric>.lyric-box>p').innerHeight()
-            $('.lyric-box').css('transform', `translateY(-${totalheight}px)`)
-            totalheight = totalheight + height
+            let top = $whichLine.offset().top
+            let linesTop = $('.lines').offset().top
+            let delta = top - linesTop - $('.lyric').height() / 3
+            $('.lines').css('transform', `translateY(-${delta}px)`)
         }
 
     }, 200)
