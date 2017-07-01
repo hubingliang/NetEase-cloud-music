@@ -37,7 +37,7 @@ $(function() {
         if ($whichLine) {
             $whichLine.addClass('active').prev().removeClass('active')
             let top = $whichLine.offset().top
-            let linesTop = $('.lines').offset().top
+            let linesTop = $('.lyric-box').offset().top
             let delta = top - linesTop - $('.lyric').height() / 3
             $('.lines').css('transform', `translateY(-${delta}px)`)
         }
