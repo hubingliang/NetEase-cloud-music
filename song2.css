@@ -43,6 +43,10 @@ strong {
     }
 }
 
+.active {
+    color: #fefefe;
+}
+
 .rotate {
     animation: circle 20s infinite linear;
 }

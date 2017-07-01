@@ -24,24 +24,19 @@ $(function() {
         let munites = ~~(seconds / 60)
         let left = seconds - munites * 60
         let time = `${pad(munites)}:${pad(left)}`
-        let $lines = $('.lines> p')
+        let $lyric = $('.lyric> p')
         let $whichLine
-        for (let i = 0; i < $lines.length; i++) {
-            let currentLineTime = $lines.eq(i).attr('data-time')
-            let nextLineTime = $lines.eq(i + 1).attr('data-time')
-            if ($lines.eq(i + 1).length !== 0 && currentLineTime < time && nextLineTime > time) {
-                $whichLine = $lines.eq(i)
-                break
-            }
+        for (let i = 0; i < $lyric.length; i++) {
+            let currentLineTime = $lyric.eq(i).attr('data-time')
+            let nextLineTime = $lyric.eq(i + 1).attr('data-time')
         }
         if ($whichLine) {
             $whichLine.addClass('active').prev().removeClass('active')
             let top = $whichLine.offset().top
-            let linesTop = $('.lines').offset().top
-            let delta = top - linesTop - $('.lyric').height() / 3
-            $('.lines').css('transform', `translateY(-${delta}px)`)
+            let lyricTop = $('.lyric').offset().top
+            let delta = top - lyricTop - $('.lyric').height() / 3
+            $('.lyric').css('transform', `translateY(-${delta}px)`)
         }
-        console.log('s')
     }, 300)
 
     function pad(number) {
@@ -57,10 +52,9 @@ $(function() {
                 return { time: matches[1], words: matches[2] }
             }
         })
-        let $lyric = $(".lyric")
+        let $lyric = $(".lyric-box")
         array.map(function(object) {
             let $p = $('</p>')
-            console.log(object)
             $p.attr('data-time', object.time).text(object.words)
             $p.appendTo($lyric)
         })
