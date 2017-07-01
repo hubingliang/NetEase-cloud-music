@@ -27,18 +27,15 @@ $(function() {
         let time = `${pad(munites)}:${pad(left)}`
         let $lyric = $('.lyric>.lyric-box>p')
         let $whichLine
-        let goon
         for (let i = 0; i < $lyric.length; i++) {
             let currentLineTime = $lyric.eq(i).attr('data-time')
             let nextLineTime = $lyric.eq(i + 1).attr('data-time')
             if ($lyric.eq(i + 1).length !== 0 && currentLineTime < time && nextLineTime > time) {
-                goon = i
                 $whichLine = $lyric.eq(i)
                 break
             }
         }
-        console.log(goon)
-        if ($whichLine && goon !== $whichLine) {
+        if ($whichLine) {
             $whichLine.addClass('active').prev().removeClass('active')
             let height = $('.lyric>.lyric-box>p').innerHeight()
             $('.lyric-box').css('transform', `translateY(-${totalheight}px)`)
