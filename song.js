@@ -24,7 +24,7 @@ $(function() {
         let munites = ~~(seconds / 60)
         let left = seconds - munites * 60
         let time = `${pad(munites)}:${pad(left)}`
-        let $lyric = $('.lyric>.lyric-box')
+        let $lyric = $('.lyric>.lyric-box>p')
         console.log($lyric)
         let $whichLine
         for (let i = 0; i < $lyric.length; i++) {
@@ -36,7 +36,7 @@ $(function() {
             }
             if ($whichLine) {
                 let height = $('.lyric>.lyric-box>p').height()
-                $('.lyric').css('transform', `translateY(-${height}px)`)
+                $('.lyric-box').css('transform', `translateY(-${height}px)`)
             }
         }
 
