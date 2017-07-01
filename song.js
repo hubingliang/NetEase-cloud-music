@@ -41,6 +41,7 @@ $(function() {
             let delta = top - linesTop - $('.lyric').height() / 3
             $('.lines').css('transform', `translateY(-${delta}px)`)
         }
+        console.log('s')
     }, 300)
 
     function pad(number) {
