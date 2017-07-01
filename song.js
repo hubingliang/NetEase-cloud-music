@@ -19,6 +19,7 @@ $(function() {
         $('.needle').addClass('movein')
 
     })
+    let totalheight = 0
     setInterval(() => {
         let seconds = audio.currentTime
         let munites = ~~(seconds / 60)
@@ -34,7 +35,6 @@ $(function() {
                 break
             }
         }
-        let totalheight = 0
         if ($whichLine) {
             $whichLine.addClass('active').prev().removeClass('active')
             let height = $('.lyric>.lyric-box>p').innerHeight()
