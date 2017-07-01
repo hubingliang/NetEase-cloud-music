@@ -39,10 +39,10 @@ $(function() {
             let top = $whichLine.offset().top
             let linesTop = $('.lyric-box').offset().top
             let delta = top - linesTop - $('.lyric').height() / 3
-            $('.lines').css('transform', `translateY(-${delta}px)`)
+            $('.lyric-box').css('transform', `translateY(-${delta}px)`)
         }
 
-    }, 200)
+    }, 100)
 
     function pad(number) {
         return number >= 10 ? number + '' : '0' + number
