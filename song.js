@@ -34,15 +34,15 @@ $(function() {
                 break
             }
         }
-        console.log($whichLine)
+        let totalheight = 0
         if ($whichLine) {
             $whichLine.addClass('active').prev().removeClass('active')
             let height = $('.lyric>.lyric-box>p').innerHeight()
-            let totalheight = 0
-            $('.lyric-box').css('transform', `translateY(-${height}px)`)
+            $('.lyric-box').css('transform', `translateY(-${totalheight}px)`)
+            totalheight = totalheight + height
         }
 
-    }, 300)
+    }, 200)
 
     function pad(number) {
         return number >= 10 ? number + '' : '0' + number
