@@ -32,7 +32,7 @@
          let $tabname = $(e.currentTarget).children().addClass('selected')
          $tabname.parents().siblings().children().removeClass('selected')
          let index = $(e.currentTarget).attr('number')
-         $('.content > tabitem').eq(index).addClass('active').siblings().removeClass('active')
+         $('.content > .tabitem').eq(index).addClass('active').siblings().removeClass('active')
          let $tabitem = $('.content > .tabitem').eq(index)
          if ($tabitem.attr('data-downloaded') === 'yes') {
              return
