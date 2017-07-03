@@ -32,8 +32,8 @@
          let $li = $(e.currentTarget).children().addClass('selected')
          $li.parents().siblings().children().removeClass('selected')
          let index = $(e.currentTarget).attr('number')
-         $('.content > .tabitem').eq(index).addClass('active').siblings().removeClass('active')
-         console.log(index)
+         $('.content > tabitem').eq(index).addClass('active').siblings().removeClass('active')
+         console.log(typeof index)
          if (index === 1) {
              console.log('ss')
              $.get('./page2.json').then((response) => {
