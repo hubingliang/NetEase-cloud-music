@@ -40,13 +40,13 @@
          setTimeout(function() {
              if (index === '1') {
                  $.get('./page2.json').then((response) => {
-                     $tabitem.children().text(response.content)
-                     $tabitem.children().attr('data-downloaded', 'yes')
+                     $tabitem.text(response.content)
+                     $tabitem.attr('data-downloaded', 'yes')
                  })
              } else if (index === '2') {
                  $.get('./page3.json').then((response) => {
-                     $tabitem.children().text(response.content)
-                     $tabitem.children().attr('data-downloaded', 'yes')
+                     $tabitem.text(response.content)
+                     $tabitem.attr('data-downloaded', 'yes')
                  })
              }
          }, 500)
