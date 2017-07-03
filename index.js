@@ -33,9 +33,22 @@
          $li.parents().siblings().children().removeClass('selected')
          let index = $(e.currentTarget).attr('number')
          $('.content > .tabitem').eq(index).addClass('active').siblings().removeClass('active')
+         console.log(index)
+         if (index === 1) {
+             $.get('./page2.json').then((response) => {
+                 $li.text(response.content)
+                 $li.attr('data-downloaded', 'yes')
+             })
+         } else if (index === 2) {
+             $.get('./page3.json').then((response) => {
+                 $li.text(response.content)
+                 $li.attr('data-downloaded', 'yes')
+             })
+         }
      })
 
      $('.nav').on('tabChange', function(e, index) {
+         console.log('s')
          let $li = $('.content > .tabitem').eq(index)
          if ($li.attr('data-downloaded') === 'yes') {
              return
@@ -47,7 +60,6 @@
                      $li.attr('data-downloaded', 'yes')
                  })
              } else if (index === 2) {
-                 return
                  $.get('./page3.json').then((response) => {
                      $li.text(response.content)
                      $li.attr('data-downloaded', 'yes')
