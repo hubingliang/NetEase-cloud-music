@@ -35,11 +35,13 @@
          $('.content > .tabitem').eq(index).addClass('active').siblings().removeClass('active')
          console.log(index)
          if (index === 1) {
+             console.log('ss')
              $.get('./page2.json').then((response) => {
                  $li.text(response.content)
                  $li.attr('data-downloaded', 'yes')
              })
          } else if (index === 2) {
+             console.log('xx')
              $.get('./page3.json').then((response) => {
                  $li.text(response.content)
                  $li.attr('data-downloaded', 'yes')
