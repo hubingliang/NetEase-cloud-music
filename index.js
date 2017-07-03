@@ -44,6 +44,7 @@
                      $tabitem.attr('data-downloaded', 'yes')
                  })
              } else if (index === '2') {
+                 return
                  $.get('./page3.json').then((response) => {
                      $tabitem.text(response.content)
                      $tabitem.attr('data-downloaded', 'yes')
