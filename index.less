@@ -13,6 +13,9 @@ a{
 }
 :after{
 }
+.active{
+    color: #D33A31;
+}
 .tab{
     width: 33.3333%;
     text-align: center;
@@ -75,18 +78,27 @@ body{
             border-bottom-width: 1px;
             border: 0 solid rgba(0,0,0,.1);
             border-bottom-width: 1px;
-            .tabName{
-                position: relative;
-                display: inline-block;
-                height: 100%;
-                padding: 0 5px;
-                box-sizing: border-box;
-                font-size: 15px;
-                line-height: 40px;
+            .tabItems{
+                width: 100%;
+                display: flex;
+                .tabName{
+                    position: relative;
+                    display: inline-block;
+                    height: 100%;
+                    padding: 0 5px;
+                    box-sizing: border-box;
+                    font-size: 15px;
+                    line-height: 40px;
+                }
             }
+
         }
         .content{
-            .tabitem{
+            .active {
+                display: block;
+            }
+            li{
+                display: none;
                 .recommend{
                     padding-top: 20px;
                     .recommend-title{

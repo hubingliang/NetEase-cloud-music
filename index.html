@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>网易云音乐</title>
-    <link rel="stylesheet" href="index2.css">
+    <link rel="stylesheet" href="index.css">
     <script src="jquery-3.2.1.min.js"></script>
     <script>
         var width = document.documentElement.clientWidth
@@ -28,22 +28,20 @@
     </div>
     <section class="main">
         <nav class="nav">
-            <li class="tab">
-                <div class="tabName selected">
-                    <span>推荐音乐</span>
-                </div>
-            </li>
-            <li class="tab">
-                <div class="tabName">热歌榜</div>
-            </li>
-            <li class="tab">
-                <div class="tabName">搜索</div>
-            </li>
-
-
+            <ol class="tabItems">
+                <li class="tab" number="0">
+                    <div class="tabName selected">推荐音乐</div>
+                </li>
+                <li class="tab" number="1">
+                    <div class="tabName">热歌榜</div>
+                </li>
+                <li class="tab" number="2">
+                    <div class="tabName">搜索</div>
+                </li>
+            </ol>
         </nav>
         <div class="content">
-            <div class="tabitem">
+            <li class="tabitem active">
                 <div class="recommend">
                     <h2 class="recommend-title">
                         推荐歌单
@@ -118,7 +116,13 @@
 
                     </footer>
                 </div>
-            </div>
+            </li>
+            <li class="tabitem">
+                2
+            </li>
+            <li class="tabitem">
+                3
+            </li>
         </div>
     </section>
     <script src="index.js"></script>
