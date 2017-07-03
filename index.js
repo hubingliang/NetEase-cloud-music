@@ -29,48 +29,29 @@
 
 
      $('.nav').on('click', 'ol.tabItems>li', function(e) {
-         let $li = $(e.currentTarget).children().addClass('selected')
-         $li.parents().siblings().children().removeClass('selected')
+         let $tabname = $(e.currentTarget).children().addClass('selected')
+         $tabname.parents().siblings().children().removeClass('selected')
          let index = $(e.currentTarget).attr('number')
          $('.content > tabitem').eq(index).addClass('active').siblings().removeClass('active')
-         console.log(typeof index)
-         if (index === '1') {
-             console.log('ss')
-             $.get('./page2.json').then((response) => {
-                 $li.children().text(response.content)
-                 $li.children().attr('data-downloaded', 'yes')
-             })
-         } else if (index === '2') {
-             console.log('xx')
-             $.get('./page3.json').then((response) => {
-                 $li.children().text(response.content)
-                 $li.children().attr('data-downloaded', 'yes')
-             })
-         } else {
-             console.log('hhhh')
-         }
-     })
-
-     $('.nav').on('tabChange', function(e, index) {
-         console.log('s')
-         let $li = $('.content > .tabitem').eq(index)
+         let $tabitem = $('.content > .tabitem').eq(index)
          if ($li.attr('data-downloaded') === 'yes') {
              return
          }
          setTimeout(function() {
-             if (index === 1) {
+             if (index === '1') {
                  $.get('./page2.json').then((response) => {
-                     $li.text(response.content)
-                     $li.attr('data-downloaded', 'yes')
+                     $tabitem.children().text(response.content)
+                     $tabitem.children().attr('data-downloaded', 'yes')
                  })
-             } else if (index === 2) {
+             } else if (index === '2') {
                  $.get('./page3.json').then((response) => {
-                     $li.text(response.content)
-                     $li.attr('data-downloaded', 'yes')
+                     $tabitem.children().text(response.content)
+                     $tabitem.children().attr('data-downloaded', 'yes')
                  })
              }
          }, 500)
      })
+
 
      let timer = undefined
      $('input#searchSong').on('input', function(e) {
