@@ -263,3 +263,6 @@ body .main .content li .recommend footer .wrap .copyright {
 body .main .content li .output {
   height: 20px;
 }
+body .main .content li .output ul {
+  height: 100%;
+}
