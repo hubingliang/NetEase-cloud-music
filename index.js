@@ -46,6 +46,8 @@
                  $li.text(response.content)
                  $li.attr('data-downloaded', 'yes')
              })
+         } else {
+             console.log('hhhh')
          }
      })
 
