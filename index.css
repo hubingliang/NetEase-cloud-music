@@ -266,3 +266,6 @@ body .main .content li .output {
 body .main .content li .output ul {
   height: 100%;
 }
+body .main .content li .output ul li {
+  display: block;
+}
