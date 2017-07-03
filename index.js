@@ -57,8 +57,9 @@
      $('input#searchSong').on('input', function(e) {
          let $input = $(e.currentTarget)
          let value = $input.val().trim()
-         if (value === '') { return }
-
+         if (value === '') {
+             return
+         }
          if (timer) {
              clearTimeout(timer)
          }
@@ -78,24 +79,29 @@
                      $('#output').html('没有结果')
                  }
              })
-         }, 300)
+         }, 500)
 
 
      })
 
      function search(keyword) {
-         console.log('搜索' + keyword)
          return new Promise((resolve, reject) => {
              var database = [
-                 { "id": 1, "name": "那些花儿", },
-                 { "id": 2, "name": "情非得已", },
-                 { "id": 3, "name": "找自己", },
+                 { "id": 1, "name": "晚春", },
+                 { "id": 2, "name": "大石碎胸口", },
+                 { "id": 3, "name": "The Good The Bad And The Ugly", },
+                 { "id": 3, "name": "λ", },
+                 { "id": 3, "name": "Where Is My Mind", },
+                 { "id": 3, "name": "山海", },
+                 { "id": 3, "name": "下雨&董卓瑶&忽然(2014i/O版)", },
+                 { "id": 3, "name": "旧情人，我是时间的新欢", },
+                 { "id": 3, "name": "黄昏", },
+                 { "id": 3, "name": "California Dreaming (重庆森林)", }
              ]
              let result = database.filter(function(item) {
                  return item.name.indexOf(keyword) >= 0
              })
              setTimeout(function() {
-                 console.log('搜到' + keyword + '的结果')
                  resolve(result)
              }, (Math.random() * 200 + 1000))
          })
