@@ -34,7 +34,7 @@
          let index = $(e.currentTarget).attr('number')
          $('.content > tabitem').eq(index).addClass('active').siblings().removeClass('active')
          let $tabitem = $('.content > .tabitem').eq(index)
-         if ($li.attr('data-downloaded') === 'yes') {
+         if ($tabitem.attr('data-downloaded') === 'yes') {
              return
          }
          setTimeout(function() {
