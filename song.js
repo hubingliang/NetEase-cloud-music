@@ -5,7 +5,8 @@ $(function() {
         let songs = response
         let song = songs.filter(s => s.id === id)[0]
         let { url, name, lyric, id } = song
-        //歌词处理
+        console.log(id)
+            //歌词处理
         let array = lyric.split('\n')
         let regex = /^\[(.+)\](.*)$/
         array = array.map(function(string, index) {
