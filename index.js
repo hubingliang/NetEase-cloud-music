@@ -72,7 +72,7 @@
                      $('#output').empty()
                      let $ul = $('<ul></ul>')
                      result.forEach((item) => {
-                         let $li = $(`<li><a href="NetEase-cloud-music/song.html?id=${item.id}">${item.name}</a></li>`)
+                         let $li = $(`<li><a href="./song.html?id=${item.id}">${item.name}</a></li>`)
                          $li.appendTo($ul)
                      })
                      $('#output').append($ul)
