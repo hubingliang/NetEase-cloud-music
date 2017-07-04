@@ -5,7 +5,7 @@ $(function() {
     $.get('./songs.json').then(function(response) {
         let songs = response
         let song = songs.filter(s => s.id === id)[0]
-        let { url, name, lyric, } = song
+        let { url, name, lyric, album } = song
         //歌词处理
         let array = lyric.split('\n')
         let regex = /^\[(.+)\](.*)$/
@@ -26,6 +26,10 @@ $(function() {
         $cover.attr('src', `cover/${id}.jpg`)
         let $coverBack = $('.cover-back')
         $coverBack.css('background-image', `url(cover/b${id}.jpg)`)
+        let $songName = $('.name')
+        $songName.html(`${name}`)
+        let $album = $('.author')
+        $album.html(`${album}`)
 
 
     })
