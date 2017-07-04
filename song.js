@@ -1,12 +1,12 @@
 $(function() {
 
     let id = parseInt(location.search.match(/\bid=([^&]*)/)[1], 10)
+    console.log(id)
     $.get('./songs.json').then(function(response) {
         let songs = response
         let song = songs.filter(s => s.id === id)[0]
-        let { url, name, lyric, id } = song
-        console.log(id)
-            //歌词处理
+        let { url, name, lyric, } = song
+        //歌词处理
         let array = lyric.split('\n')
         let regex = /^\[(.+)\](.*)$/
         array = array.map(function(string, index) {
