@@ -4,7 +4,8 @@ $(function() {
     $.get('./songs.json').then(function(response) {
         let songs = response
         let song = songs.filter(s => s.id === id)[0]
-        let { url, name, lyric } = song
+        let { url, name, lyric, id } = song
+        //歌词处理
         let array = lyric.split('\n')
         let regex = /^\[(.+)\](.*)$/
         array = array.map(function(string, index) {
@@ -19,6 +20,10 @@ $(function() {
             $p.attr('data-time', object.time).text(object.words)
             $p.appendTo($lyric)
         })
+
+        let $cover = $('.cover')
+        $cover.attr('src', `cover${id}`)
+
 
     })
     let audio = document.createElement('audio')
@@ -70,5 +75,3 @@ $(function() {
         return number >= 10 ? number + '' : '0' + number
     }
 })
-
-//fangfang
