@@ -25,7 +25,7 @@ $(function() {
         let $cover = $('.cover')
         $cover.attr('src', `cover/${id}.jpg`)
         let $coverBack = $('.cover-back')
-        $coverBack.css('background-image', 'url(cover/b${id}.jpg)')
+        $coverBack.css('background-image', `url(cover/b${id}.jpg)`)
 
 
     })
