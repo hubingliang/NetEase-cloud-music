@@ -75,7 +75,7 @@ body .page {
 
 body .page .cover-back {
     position: absolute;
-    background-image: url(img/cover-back.jpg);
+    background-image: url();
     width: 100%;
     height: 100%;
     transform: scale(1.5);

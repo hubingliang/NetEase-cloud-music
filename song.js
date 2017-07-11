@@ -31,11 +31,10 @@ $(function() {
         let $album = $('.author')
         $album.html(`${album}`)
 
-
-
+        let audio = document.createElement('audio')
+        audio.src = `${url}`
     })
-    let audio = document.createElement('audio')
-    audio.src = `${url}`
+
     $('#cover').on('touchstart', function() {
         audio.pause()
         $('.cover').addClass('norotate')
