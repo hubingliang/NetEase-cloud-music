@@ -32,9 +32,10 @@ $(function() {
         $album.html(`${album}`)
 
 
+
     })
     let audio = document.createElement('audio')
-    audio.src = '//dl.stream.qqmusic.qq.com/C400003TEnl83gBNge.m4a?vkey=255D47EF6567AD5302A31F136F3AC6D57EDB18EF2F536B2D00B0ACFF3A158E171046E52681CB235DB7B6170C245AAF0FE3711B9AA07DBE1A&guid=7561507023&uin=1104524352&fromtag=66'
+    audio.src = url
     $('#cover').on('touchstart', function() {
         audio.pause()
         $('.cover').addClass('norotate')
