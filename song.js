@@ -31,7 +31,7 @@ $(function() {
         let $album = $('.author')
         $album.html(`${album}`)
         mp3 = url
-        console.log(url)
+        console.log(song)
     })
 
     let audio = document.createElement('audio')
