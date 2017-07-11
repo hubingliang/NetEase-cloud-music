@@ -30,11 +30,13 @@ $(function() {
         $songName.html(`${name}`)
         let $album = $('.author')
         $album.html(`${album}`)
-        mp3 = song
+        mp3 = url
+        console.log(url)
     })
 
     let audio = document.createElement('audio')
     audio.src = mp3
+    console.log(audio.src)
     $('#cover').on('touchstart', function() {
         audio.pause()
         $('.cover').addClass('norotate')
