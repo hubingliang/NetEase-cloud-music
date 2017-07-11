@@ -50,35 +50,36 @@ $(function() {
             $('.needle').addClass('movein')
 
         })
+        setInterval(() => {
+            let seconds = audio.currentTime
+            let munites = ~~(seconds / 60)
+            let left = seconds - munites * 60
+            let time = `${pad(munites)}:${pad(left)}`
+            let $lyric = $('.lyric>.lyric-box>p')
+            let $whichLine
+            for (let i = 0; i < $lyric.length; i++) {
+                let currentLineTime = $lyric.eq(i).attr('data-time')
+                let nextLineTime = $lyric.eq(i + 1).attr('data-time')
+                if ($lyric.eq(i + 1).length !== 0 && currentLineTime < time && nextLineTime > time) {
+                    $whichLine = $lyric.eq(i)
+                    break
+                }
+            }
+            if ($whichLine) {
+                $whichLine.addClass('active').prev().removeClass('active')
+                let top = $whichLine.offset().top
+                let linesTop = $('.lyric-box').offset().top
+                let delta = top - linesTop - $('.lyric').height() / 3
+                $('.lyric-box').css('transform', `translateY(-${delta}px)`)
+            }
+
+        }, 100)
+
+        function pad(number) {
+            return number >= 10 ? number + '' : '0' + number
+        }
     })
 
 
-    setInterval(() => {
-        let seconds = audio.currentTime
-        let munites = ~~(seconds / 60)
-        let left = seconds - munites * 60
-        let time = `${pad(munites)}:${pad(left)}`
-        let $lyric = $('.lyric>.lyric-box>p')
-        let $whichLine
-        for (let i = 0; i < $lyric.length; i++) {
-            let currentLineTime = $lyric.eq(i).attr('data-time')
-            let nextLineTime = $lyric.eq(i + 1).attr('data-time')
-            if ($lyric.eq(i + 1).length !== 0 && currentLineTime < time && nextLineTime > time) {
-                $whichLine = $lyric.eq(i)
-                break
-            }
-        }
-        if ($whichLine) {
-            $whichLine.addClass('active').prev().removeClass('active')
-            let top = $whichLine.offset().top
-            let linesTop = $('.lyric-box').offset().top
-            let delta = top - linesTop - $('.lyric').height() / 3
-            $('.lyric-box').css('transform', `translateY(-${delta}px)`)
-        }
 
-    }, 100)
-
-    function pad(number) {
-        return number >= 10 ? number + '' : '0' + number
-    }
 })
