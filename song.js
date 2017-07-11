@@ -30,31 +30,29 @@ $(function() {
         $songName.html(`${name}`)
         let $album = $('.author')
         $album.html(`${album}`)
-        mp3 = url
-        console.log(url)
+        let audio = document.createElement('audio')
+        audio.src = url
+        $('#cover').on('touchstart', function() {
+            audio.pause()
+            $('.cover').addClass('norotate')
+            $('.disc_light').addClass('norotate')
+            $('#play').css('display', '')
+            $('.needle').removeClass('movein')
+            $('.needle').addClass('moveout')
+
+        })
+        $('#play').on('touchstart', function() {
+            audio.play()
+            $('.cover').addClass('rotate').removeClass('norotate')
+            $('.disc_light').addClass('rotate').removeClass('norotate')
+            $('#play').css('display', 'none')
+            $('.needle').removeClass('moveout')
+            $('.needle').addClass('movein')
+
+        })
     })
 
-    let audio = document.createElement('audio')
-    audio.src = mp3
-    console.log(mp3)
-    $('#cover').on('touchstart', function() {
-        audio.pause()
-        $('.cover').addClass('norotate')
-        $('.disc_light').addClass('norotate')
-        $('#play').css('display', '')
-        $('.needle').removeClass('movein')
-        $('.needle').addClass('moveout')
 
-    })
-    $('#play').on('touchstart', function() {
-        audio.play()
-        $('.cover').addClass('rotate').removeClass('norotate')
-        $('.disc_light').addClass('rotate').removeClass('norotate')
-        $('#play').css('display', 'none')
-        $('.needle').removeClass('moveout')
-        $('.needle').addClass('movein')
-
-    })
     setInterval(() => {
         let seconds = audio.currentTime
         let munites = ~~(seconds / 60)
