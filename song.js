@@ -1,7 +1,7 @@
 $(function() {
 
     let id = parseInt(location.search.match(/\bid=([^&]*)/)[1], 10)
-    let url
+    let mp3
     $.get('./songs.json').then(function(response) {
         let songs = response
         let song = songs.filter(s => s.id === id)[0]
@@ -30,12 +30,12 @@ $(function() {
         $songName.html(`${name}`)
         let $album = $('.author')
         $album.html(`${album}`)
-        url = `${url}`
+        mp3 = url
 
     })
 
     let audio = document.createElement('audio')
-    audio.src = `${url}`
+    audio.src = mp3
     console.log(audio.src)
     $('#cover').on('touchstart', function() {
         audio.pause()
