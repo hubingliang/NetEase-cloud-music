@@ -36,6 +36,7 @@ $(function() {
 
     let audio = document.createElement('audio')
     audio.src = `${url}`
+    console.log(audio.src)
     $('#cover').on('touchstart', function() {
         audio.pause()
         $('.cover').addClass('norotate')
