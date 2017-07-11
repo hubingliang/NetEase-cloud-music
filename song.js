@@ -29,7 +29,7 @@ $(function() {
         let $songName = $('.name')
         $songName.html(`${name}`)
         let $album = $('.author')
-        $album.html(`${album}`)
+        $album.html(`${author}`)
         let audio = document.createElement('audio')
         audio.src = url
         $('#cover').on('touchstart', function() {
