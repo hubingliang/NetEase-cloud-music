@@ -5,7 +5,7 @@ $(function() {
     $.get('./songs.json').then(function(response) {
         let songs = response
         let song = songs.filter(s => s.id === id)[0]
-        let { url, name, lyric, album } = song
+        let { url, name, lyric, album, author } = song
         //歌词处理
         let array = lyric.split('\n')
         let regex = /^\[(.+)\](.*)$/
