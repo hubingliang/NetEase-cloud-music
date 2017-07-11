@@ -30,7 +30,7 @@ $(function() {
         $songName.html(`${name}`)
         let $album = $('.author')
         $album.html(`${album}`)
-        url = (`${url}`)
+        url = `${url}`
 
     })
 
