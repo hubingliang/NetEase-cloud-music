@@ -247,7 +247,7 @@ body .main .content li .recommend .new-music .music-list a .items .right span {
     padding: 0 0.625rem;
     width: 1.375rem;
     height: 1.375rem;
-    background: url(images/s.png) no-repeat;
+    background: url(../images/s.png) no-repeat;
     background-position: -1.5rem 0;
     background-size: 10.375rem 6.0625rem;
 }
