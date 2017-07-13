@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 // 版本号
 var APP_VERSION = 'v.1.0';
 
-gulp.task('ugconjs', function() {
+gulp.task('js', function() {
     // 1. 找到文件
     gulp.src(['js/*.js'])
         .pipe(babel({
@@ -36,4 +36,43 @@ gulp.task('ugconjs', function() {
         }))
         // 5. 另存压缩后的文件
         .pipe(gulp.dest('dist/js'))
+});
+
+gulp.task('css', function() {
+    // 1. 找到文件
+    gulp.src('css/*.css')
+        // 2. 压缩文件
+        .pipe(cssnano())
+        .pipe(concat('all.css'))
+        // 3. 另存为压缩文件
+        .pipe(gulp.dest('dist/css'))
+});
+
+gulp.task('images', function() {
+    // 1. 找到图片
+    gulp.src('images/*.*')
+        // 2. 压缩图片
+        .pipe(imagemin({
+            progressive: true
+        }))
+        // 3. 另存图片
+        .pipe(gulp.dest('dist/images'))
+});
+gulp.task('html', function() {
+    var options = {
+        collapseWhitespace: true, //压缩HTML
+        //省略布尔属性的值 <input checked="true"/> ==> <input />
+        collapseBooleanAttributes: false,
+        //删除所有空格作属性值 <input id="" /> ==> <input />
+        removeEmptyAttributes: true,
+        //删除<script>的type="text/javascript"
+        removeScriptTypeAttributes: true,
+        //删除<style>和<link>的type="text/css"
+        removeStyleLinkTypeAttributes: true,
+        minifyJS: true, //压缩页面JS
+        minifyCSS: true //压缩页面CSS
+    };
+    gulp.src('*.html')
+        .pipe(htmlmin(options))
+        .pipe(gulp.dest('dist'));
 });
