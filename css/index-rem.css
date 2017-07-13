@@ -256,7 +256,7 @@ body .main .content li .recommend footer {
     position: relative;
     padding-top: 53.3%;
     margin-top: 0.25rem;
-    background: url(images/crowd.png) no-repeat;
+    background: url(../images/crowd.png) no-repeat;
     background-size: contain;
 }
 
