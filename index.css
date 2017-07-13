@@ -33,9 +33,6 @@ a {
   transform: scaleY(0.5);
   background: #d33a31;
 }
-body {
-  font-size: 16px;
-}
 body .top-bar {
   background: #d23c33;
   position: fixed;

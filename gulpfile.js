@@ -31,9 +31,6 @@ gulp.task('js', function() {
         // 3. 合并成一个文件
         .pipe(concat('all.js'))
         // 4. 改名
-        .pipe(rename(function(path) {
-            path.basename += "_" + APP_VERSION;
-        }))
         // 5. 另存压缩后的文件
         .pipe(gulp.dest('dist/js'))
 });
