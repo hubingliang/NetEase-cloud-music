@@ -41,29 +41,29 @@
              if (index === '1') {
                  $.get('../songs.json').then(function(response) {
                      let items = response
-                     let number = function(id) {
-                         let count
-                         if (id < 10) {
-                             count = `0` + id
-                         } else {
-                             count = id
-                         }
-                         console.log(count)
-                         return count
-                     }
-                     let red = function(id) {
-                         let red
-                         if (id < 4) {
-                             red = 'red number'
-                         } else {
-                             red = 'number'
-                         }
-                         console.log(red)
-                         return red
-                     }
-                     number(i.id)
-                     red(i.id)
                      items.forEach(i => {
+                         let number = function(id) {
+                             let count
+                             if (id < 10) {
+                                 count = `0` + id
+                             } else {
+                                 count = id
+                             }
+                             console.log(count)
+                             return count
+                         }
+                         let red = function(id) {
+                             let red
+                             if (id < 4) {
+                                 red = 'red number'
+                             } else {
+                                 red = 'number'
+                             }
+                             console.log(red)
+                             return red
+                         }
+                         number(i.id)
+                         red(i.id)
                          let $li = $(
                              `
                 <a href="./song.html?id=${i.id}">
