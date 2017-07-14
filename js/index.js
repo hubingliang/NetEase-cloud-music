@@ -45,7 +45,7 @@
                          let red = function(id) {
                              let hot
                              if (id < 4) {
-                                 hot = 'red number'
+                                 hot = 'number' + ` red`
                              } else {
                                  hot = 'number'
                              }
