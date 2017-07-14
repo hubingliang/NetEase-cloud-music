@@ -42,32 +42,32 @@
                  $.get('../songs.json').then(function(response) {
                      let items = response
                      let red = function(id) {
-                         let red
+                         let hot
                          if (id < 4) {
-                             red = 'red number'
+                             hot = 'red number'
                          } else {
-                             red = 'number'
+                             hot = 'number'
                          }
-                         console.log(red)
-                         return red
+                         console.log(hot)
+                         return hot
                      }
                      let number = function(id) {
-                         let number
+                         let count
                          if (id < 10) {
-                             number = '0' + id
+                             count = '0' + id
                          } else {
-                             number = id
+                             count = id
                          }
-                         console.log(number)
-                         return number
+                         console.log(count)
+                         return count
                      }
                      items.forEach(i => {
                          number(i.id)
                          red(i.id)
                          let $li = $(
                              `
-                <a href="./song.html?id=${i.id}">
-                        <div class=${red}>${i.id}</number>
+                    <a href="./song.html?id=${i.id}">
+                        <div class=${hot}>${count}</number>
                         <div class="items">
                             <div class="left">
                                 <p class="name">${i.name}</p>
