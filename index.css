@@ -380,7 +380,7 @@ body .main .content li .hotop:after {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-body .main .content li .hotcontent {
+body .main .content li .hotcontent a {
     padding-left: 10px;
     display: block;
     height: 54.4px;
