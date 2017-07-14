@@ -356,6 +356,10 @@ body .main .content li .hotcontent a {
     margin-top: -1px;
 }
 
+body .main .content li .hotcontent a .red {
+    color: #df3436;
+}
+
 body .main .content li .hotcontent a .number {
     color: #999;
     align-items: center;
