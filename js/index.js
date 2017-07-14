@@ -67,7 +67,7 @@
                          let $li = $(
                              `
                     <a href="./song.html?id=${i.id}">
-                        <div class=${hot}>${count}</number>
+                        <div class=${hot}>${count}</div>
                         <div class="items">
                             <div class="left">
                                 <p class="name">${i.name}</p>
