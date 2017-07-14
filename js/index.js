@@ -35,7 +35,27 @@
          $('.content > .tabitem').eq(index).addClass('active').siblings().removeClass('active')
          let $tabitem = $('.content > .tabitem').eq(index)
          if ($tabitem.attr('data-downloaded') === 'yes') {
-             return
+             $.get('../songs.json').then(function(response) {
+                 let items = response
+                 items.forEach(i => {
+                     let $li = $(
+                         `
+                <a href="./song.html?id=${i.id}">
+                        <div class="items">
+                            <div class="left">
+                                <p class="name">${i.name}</p>
+                                <p class="author">${i.author} - ${i.album}</p>
+                            </div>
+                            <div class="right">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+					`
+                     )
+                     $('.hotcontent').append($li)
+                 })
+             })
          }
          setTimeout(function() {
              if (index === '1') {
