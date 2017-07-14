@@ -51,7 +51,7 @@
                          console.log(red)
                          return red
                      }
-                     let number = function() {
+                     let number = function(id) {
                          let number
                          if (id < 10) {
                              number = '0' + id
