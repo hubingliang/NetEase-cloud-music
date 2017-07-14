@@ -1,4 +1,5 @@
-node_modules/*
-/*.html
-/*.css
-/*.less
+/node_modules/
+*.html
+*.css
+*.less
+.gitignore 
