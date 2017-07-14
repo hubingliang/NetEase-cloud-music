@@ -258,7 +258,7 @@ body .main .content li .recommend footer .wrap .copyright {
   transform: scale(0.75);
 }
 body .main .content li .hotop {
-  background: url(images/hotmusic.jpg);
+  background: url(../images/hotmusic.jpg);
   width: 320px;
   height: 124.48px;
 }

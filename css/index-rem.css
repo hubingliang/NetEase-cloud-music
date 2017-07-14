@@ -299,7 +299,7 @@ body .main .content li .recommend footer .wrap .copyright {
 }
 
 body .main .content li .hotop {
-    background: url(images/hotmusic.jpg);
+    background: url(../images/hotmusic.jpg);
     width: 20rem;
     height: 7.78rem;
 }
@@ -313,6 +313,7 @@ body .main .content li .hotop .hotopct {
 
 body .main .content li .hotop .hotopct .hoticon {
     width: 8.875rem;
+    height: 4.1875rem;
     background-position: -1.5rem -1.875rem;
     background: url(images/s.png);
     background-size: 10.375rem 6.0625rem;
