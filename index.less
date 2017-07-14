@@ -35,7 +35,39 @@ a{
         background: #d33a31;
     }
 }
-
+.items{
+    display: flex;
+    width: 100%;
+    .left{
+        flex: 1;
+        .name{
+            font-size: 17px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .author{
+            color: #888;
+            font-size: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        span{
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            width: 22px;
+            height: 22px;
+            background: url(images/s.png) no-repeat;
+            background-position: -24px 0;
+            background-size: 166px 97px;
+        }
+    }
+}
 body{
     .top-bar{
         background: rgb(210, 60, 51);
@@ -269,8 +301,9 @@ body{
             li{
                 .hotop{
                     background: url(../images/hotmusic.jpg);
-                    width: 320px;
-                    height: 124.48px;
+                    position: relative;
+                    overflow: hidden;
+                    background-size: contain;
                     .hotopct{
                         display: flex;
                         flex-direction: column;
@@ -289,6 +322,7 @@ body{
                         }
                     }
                 }
+                .items{}
             }
             li{
                 .output{
