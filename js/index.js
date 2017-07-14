@@ -48,13 +48,26 @@
                          } else {
                              count = id
                          }
+                         console.log(count)
                          return count
                      }
+                     let red = function(id) {
+                         let red
+                         if (id < 4) {
+                             red = 'red number'
+                         } else {
+                             red = 'number'
+                         }
+                         console.log(red)
+                         return red
+                     }
+                     number(i.id)
+                     red(i.id)
                      items.forEach(i => {
                          let $li = $(
                              `
                 <a href="./song.html?id=${i.id}">
-                        <div class="number">${count}</number>
+                        <div class=${red}>${count}</number>
                         <div class="items">
                             <div class="left">
                                 <p class="name">${i.name}</p>

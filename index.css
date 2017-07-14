@@ -14,6 +14,10 @@ a {
     text-decoration: none;
 }
 
+.red {
+    color: #df3436;
+}
+
 .active {
     color: #D33A31;
 }
@@ -389,6 +393,13 @@ body .main .content li .hotcontent a {
     display: flex;
     align-items: center;
     margin-top: -1px;
+}
+
+body .main .content li .items .number {
+    color: #999;
+    align-items: center;
+    width: 28px;
+    font-size: 17px;
 }
 
 body .main .content li .output {
