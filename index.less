@@ -300,26 +300,42 @@ body{
             }
             li{
                 .hotop{
-                    background: url(../images/hotmusic.jpg);
+                    background: url(../images/hotmusic.jpg) no-repeat;
                     position: relative;
                     overflow: hidden;
                     background-size: contain;
+                    padding-top: 38.9%;
+
                     .hotopct{
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         padding-left: 20px;
                         height: 124.48px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
                         .hoticon{
                             width: 142px;
                             height: 67px;
-                            background-position: -24px -30px;
                             background: url(../images/s.png) no-repeat;
+                            background-position: -24px -30px;
                             background-size: 166px 97px;
                         }
                         .hottime{
-
+                            margin-top: 10px;
+                            color: hsla(0,0%,100%,.8);
+                            font-size: 12px;
                         }
+                    }
+                    &:after{
+                        content: " ";
+                        z-index: 1;
+                        height: 124.48px;
+                        width: 320px;
+                        background-color: rgba(0,0,0,.2);
                     }
                 }
                 .items{}

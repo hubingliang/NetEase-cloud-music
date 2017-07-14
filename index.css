@@ -338,10 +338,11 @@ body .main .content li .recommend footer .wrap .copyright {
 }
 
 body .main .content li .hotop {
-    background: url(../images/hotmusic.jpg);
+    background: url(../images/hotmusic.jpg) no-repeat;
     position: relative;
     overflow: hidden;
     background-size: contain;
+    padding-top: 38.9%;
 }
 
 body .main .content li .hotop .hotopct {
@@ -350,14 +351,33 @@ body .main .content li .hotop .hotopct {
     justify-content: center;
     padding-left: 20px;
     height: 124.48px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 body .main .content li .hotop .hotopct .hoticon {
     width: 142px;
     height: 67px;
-    background-position: -24px -30px;
     background: url(../images/s.png) no-repeat;
+    background-position: -24px -30px;
     background-size: 166px 97px;
+}
+
+body .main .content li .hotop .hotopct .hottime {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+}
+
+body .main .content li .hotop:after {
+    content: " ";
+    z-index: 1;
+    height: 124.48px;
+    width: 320px;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 body .main .content li .output {
