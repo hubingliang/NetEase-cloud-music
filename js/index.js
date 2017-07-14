@@ -45,9 +45,9 @@
                          let red = function(id) {
                              let hot
                              if (id < 4) {
-                                 hot = 'number' + ` red`
+                                 hot = `red`
                              } else {
-                                 hot = 'number'
+                                 hot = ' '
                              }
                              console.log(hot)
                              return hot
@@ -67,7 +67,7 @@
                          let $li = $(
                              `
                     <a href="./song.html?id=${i.id}">
-                        <div class=${hot}>${count}</div>
+                        <div class="number ${hot}">${count}</div>
                         <div class="items">
                             <div class="left">
                                 <p class="name">${i.name}</p>
