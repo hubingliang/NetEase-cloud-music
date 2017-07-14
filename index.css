@@ -257,6 +257,22 @@ body .main .content li .recommend footer .wrap .copyright {
   line-height: 16px;
   transform: scale(0.75);
 }
+body .main .content li .hotop {
+  background: url(images/hotmusic.jpg);
+  width: 320px;
+}
+body .main .content li .hotop .hotopct {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+body .main .content li .hotop .hotopct .hoticon {
+  width: 142px;
+  background-position: -24px -30px;
+  background: url(images/s.png);
+  background-size: 166px 97px;
+}
 body .main .content li .output {
   height: 20px;
 }
