@@ -41,10 +41,20 @@
              if (index === '1') {
                  $.get('../songs.json').then(function(response) {
                      let items = response
+                     let number = function(id) {
+                         let count
+                         if (id < 10) {
+                             count = `0` + id
+                         } else {
+                             count = id
+                         }
+                         return count
+                     }
                      items.forEach(i => {
                          let $li = $(
                              `
                 <a href="./song.html?id=${i.id}">
+                        <div class="number">${count}</number>
                         <div class="items">
                             <div class="left">
                                 <p class="name">${i.name}</p>
