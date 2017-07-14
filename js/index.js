@@ -39,10 +39,7 @@
          }
          setTimeout(function() {
              if (index === '1') {
-                 $.get('../page2.json').then((response) => {
-                     $tabitem.text(response.content)
-                     $tabitem.attr('data-downloaded', 'yes')
-                 })
+                 return
              } else if (index === '2') {
                  return
              }
