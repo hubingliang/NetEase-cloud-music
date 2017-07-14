@@ -41,16 +41,6 @@
              if (index === '1') {
                  $.get('../songs.json').then(function(response) {
                      let items = response
-                     let number = function(id) {
-                         let count
-                         if (id < 10) {
-                             count = `0` + id
-                         } else {
-                             count = id
-                         }
-                         console.log(count)
-                         return count
-                     }
                      let red = function(id) {
                          let red
                          if (id < 4) {
@@ -67,7 +57,7 @@
                          let $li = $(
                              `
                 <a href="./song.html?id=${i.id}">
-                        <div class=${red}>${count}</number>
+                        <div class=${red}>${i.id}</number>
                         <div class="items">
                             <div class="left">
                                 <p class="name">${i.name}</p>
