@@ -38,39 +38,6 @@ a{
         background: #d33a31;
     }
 }
-.items{
-    display: flex;
-    width: 100%;
-    .left{
-        flex: 1;
-        .name{
-            font-size: 17px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .author{
-            color: #888;
-            font-size: 12px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-    .right{
-        display: flex;
-        align-items: center;
-        padding: 0 10px;
-        span{
-            display: flex;
-            align-items: center;
-            padding: 0 10px;
-            width: 22px;
-            height: 22px;
-            background: url(../images/s.png) no-repeat;
-            background-position: -24px 0;
-            background-size: 166px 97px;
-        }
-    }
-}
 body{
     .top-bar{
         background: rgb(210, 60, 51);
@@ -350,14 +317,45 @@ body{
                         display: flex;
                         align-items: center;
                         margin-top: -1px;
-                    }
-                }
-                .items{
-                    .number{
-                        color: #999;
-                        align-items: center;
-                        width: 28px;
-                        font-size: 17px;
+                        .number{
+                            color: #999;
+                            align-items: center;
+                            width: 28px;
+                            font-size: 17px;
+                        }
+                        .items{
+                            display: flex;
+                            width: 100%;
+                            .left{
+                                flex: 1;
+                                .name{
+                                    font-size: 17px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                                .author{
+                                    color: #888;
+                                    font-size: 12px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            .right{
+                                display: flex;
+                                align-items: center;
+                                padding: 0 10px;
+                                span{
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 0 10px;
+                                    width: 22px;
+                                    height: 22px;
+                                    background: url(../images/s.png) no-repeat;
+                                    background-position: -24px 0;
+                                    background-size: 166px 97px;
+                                }
+                            }
+                        }
                     }
                 }
             }

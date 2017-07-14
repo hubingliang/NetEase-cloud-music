@@ -44,45 +44,6 @@ a {
     background: #d33a31;
 }
 
-.items {
-    display: flex;
-    width: 100%;
-}
-
-.items .left {
-    flex: 1;
-}
-
-.items .left .name {
-    font-size: 17px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.items .left .author {
-    color: #888;
-    font-size: 12px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.items .right {
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-}
-
-.items .right span {
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-    width: 22px;
-    height: 22px;
-    background: url(../images/s.png) no-repeat;
-    background-position: -24px 0;
-    background-size: 166px 97px;
-}
-
 body .top-bar {
     background: #d23c33;
     position: fixed;
@@ -395,11 +356,50 @@ body .main .content li .hotcontent a {
     margin-top: -1px;
 }
 
-body .main .content li .items .number {
+body .main .content li .hotcontent a .number {
     color: #999;
     align-items: center;
     width: 28px;
     font-size: 17px;
+}
+
+body .main .content li .hotcontent a .items {
+    display: flex;
+    width: 100%;
+}
+
+body .main .content li .hotcontent a .items .left {
+    flex: 1;
+}
+
+body .main .content li .hotcontent a .items .left .name {
+    font-size: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body .main .content li .hotcontent a .items .left .author {
+    color: #888;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body .main .content li .hotcontent a .items .right {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+body .main .content li .hotcontent a .items .right span {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    width: 22px;
+    height: 22px;
+    background: url(../images/s.png) no-repeat;
+    background-position: -24px 0;
+    background-size: 166px 97px;
 }
 
 body .main .content li .output {

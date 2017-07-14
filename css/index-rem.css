@@ -14,6 +14,10 @@ a {
     text-decoration: none;
 }
 
+.red {
+    color: #df3436;
+}
+
 .active {
     color: #D33A31;
 }
@@ -38,45 +42,6 @@ a {
     height: 0.25rem;
     transform: scaleY(0.5);
     background: #d33a31;
-}
-
-.items {
-    display: flex;
-    width: 100%;
-}
-
-.items .left {
-    flex: 1;
-}
-
-.items .left .name {
-    font-size: 1.0625rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.items .left .author {
-    color: #888;
-    font-size: 0.75rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.items .right {
-    display: flex;
-    align-items: center;
-    padding: 0 0.625rem;
-}
-
-.items .right span {
-    display: flex;
-    align-items: center;
-    padding: 0 0.625rem;
-    width: 1.375rem;
-    height: 1.375rem;
-    background: url(../images/s.png) no-repeat;
-    background-position: -1.5rem 0;
-    background-size: 10.375rem 6.0625rem;
 }
 
 body .top-bar {
@@ -389,6 +354,52 @@ body .main .content li .hotcontent a {
     display: flex;
     align-items: center;
     margin-top: -0.0625rem;
+}
+
+body .main .content li .hotcontent a .number {
+    color: #999;
+    align-items: center;
+    width: 1.75rem;
+    font-size: 1.0625rem;
+}
+
+body .main .content li .hotcontent a .items {
+    display: flex;
+    width: 100%;
+}
+
+body .main .content li .hotcontent a .items .left {
+    flex: 1;
+}
+
+body .main .content li .hotcontent a .items .left .name {
+    font-size: 1.0625rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body .main .content li .hotcontent a .items .left .author {
+    color: #888;
+    font-size: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body .main .content li .hotcontent a .items .right {
+    display: flex;
+    align-items: center;
+    padding: 0 0.625rem;
+}
+
+body .main .content li .hotcontent a .items .right span {
+    display: flex;
+    align-items: center;
+    padding: 0 0.625rem;
+    width: 1.375rem;
+    height: 1.375rem;
+    background: url(../images/s.png) no-repeat;
+    background-position: -1.5rem 0;
+    background-size: 10.375rem 6.0625rem;
 }
 
 body .main .content li .output {
