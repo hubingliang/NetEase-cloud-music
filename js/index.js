@@ -51,6 +51,16 @@
                          console.log(red)
                          return red
                      }
+                     let number = function() {
+                         let number
+                         if (id < 10) {
+                             number = '0' + id
+                         } else {
+                             number = id
+                         }
+                         console.log(number)
+                         return number
+                     }
                      items.forEach(i => {
                          number(i.id)
                          red(i.id)
