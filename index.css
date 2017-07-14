@@ -270,6 +270,7 @@ body .main .content li .hotop .hotopct {
 }
 body .main .content li .hotop .hotopct .hoticon {
   width: 142px;
+  height: 67px;
   background-position: -24px -30px;
   background: url(images/s.png);
   background-size: 166px 97px;
