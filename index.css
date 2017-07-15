@@ -540,6 +540,45 @@ body .main .content li .output ul {
     height: 100%;
 }
 
-body .main .content li .output ul li {
-    display: block;
+body .main .content li .output ul .items {
+    display: flex;
+    width: 100%;
+}
+
+body .main .content li .output ul .items .left {
+    flex: 1;
+    width: 240px;
+    white-space: nowrap;
+}
+
+body .main .content li .output ul .items .left .name {
+    font-size: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body .main .content li .output ul .items .left .author {
+    color: #888;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 240px;
+    white-space: nowrap;
+}
+
+body .main .content li .output ul .items .right {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+body .main .content li .output ul .items .right span {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    width: 22px;
+    height: 22px;
+    background: url(../images/s.png) no-repeat;
+    background-position: -24px 0;
+    background-size: 166px 97px;
 }
