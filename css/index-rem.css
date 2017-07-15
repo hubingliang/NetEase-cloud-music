@@ -432,6 +432,8 @@ body .main .content li .hotbotton .hotview {
 body .main .content li .form {
     padding: 0.9375rem 0.625rem;
     position: relative;
+    border: 0 solid rgba(0, 0, 0, 0.1);
+    border-bottom-width: .0625rem;
 }
 
 body .main .content li .form .inputcover {
@@ -490,6 +492,8 @@ body .main .content li .form:after {
 
 body .main .content li .hot-search {
     padding: 0.9375rem 0.625rem 0;
+    border: 0 solid rgba(0, 0, 0, 0.1);
+    border-bottom-width: .0625rem;
 }
 
 body .main .content li .hot-search .title {
