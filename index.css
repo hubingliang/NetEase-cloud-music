@@ -224,6 +224,7 @@ body .main .content li .recommend .new-music .music-list a .items {
 
 body .main .content li .recommend .new-music .music-list a .items .left {
     flex: 1;
+    width: 268px;
 }
 
 body .main .content li .recommend .new-music .music-list a .items .left .name {
@@ -233,6 +234,7 @@ body .main .content li .recommend .new-music .music-list a .items .left .name {
 }
 
 body .main .content li .recommend .new-music .music-list a .items .left .author {
+    width: 268px;
     color: #888;
     font-size: 12px;
     overflow: hidden;
@@ -356,15 +358,15 @@ body .main .content li .hotcontent a {
     margin-top: -1px;
 }
 
-body .main .content li .hotcontent a .red {
-    color: #df3436;
-}
-
 body .main .content li .hotcontent a .number {
     color: #999;
     align-items: center;
     width: 28px;
     font-size: 17px;
+}
+
+body .main .content li .hotcontent a .red {
+    color: #df3436;
 }
 
 body .main .content li .hotcontent a .items {
@@ -374,6 +376,7 @@ body .main .content li .hotcontent a .items {
 
 body .main .content li .hotcontent a .items .left {
     flex: 1;
+    width: 268px;
 }
 
 body .main .content li .hotcontent a .items .left .name {
@@ -387,6 +390,7 @@ body .main .content li .hotcontent a .items .left .author {
     font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 268px;
 }
 
 body .main .content li .hotcontent a .items .right {

@@ -39,6 +39,7 @@
          }
          setTimeout(function() {
              if (index === '1') {
+                 $tabitem.attr('data-downloaded', 'yes')
                  $.get('../songs.json').then(function(response) {
                      let items = response
                      items.forEach(i => {
