@@ -2,7 +2,7 @@ $(function() {
 
     let id = parseInt(location.search.match(/\bid=([^&]*)/)[1], 10)
     let mp3
-    $.get('./songs.json').then(function(response) {
+    $.get('../songs.json').then(function(response) {
         let songs = response
         let song = songs.filter(s => s.id === id)[0]
         let { url, name, lyric, album, author } = song

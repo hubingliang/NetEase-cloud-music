@@ -64,7 +64,7 @@ strong {
 }
 
 body {
-    font-size: 0.05rem;
+    font-size: 1rem;
 }
 
 body .page {
@@ -75,7 +75,7 @@ body .page {
 
 body .page .cover-back {
     position: absolute;
-    background-image: url();
+    background-image: url(../images/cover-back.jpg);
     width: 100%;
     height: 100%;
     transform: scale(1.5);
@@ -94,69 +94,69 @@ body .page .cover-back:after {
 
 body .page .phonograph {
     position: relative;
-    height: 0.97188rem;
+    height: 19.4375rem;
 }
 
 body .page .phonograph .play {
-    background-image: url(img/play.png);
-    width: 0.15625rem;
-    height: 0.15625rem;
+    background-image: url(../images/play.png);
+    width: 3.125rem;
+    height: 3.125rem;
     background-size: contain;
     z-index: 10;
     position: absolute;
     left: 50%;
-    margin-left: -0.07813rem;
-    margin-top: 0.50625rem;
+    margin-left: -1.5625rem;
+    margin-top: 10.125rem;
 }
 
 body .page .phonograph .needle {
     position: absolute;
-    width: 0.2625rem;
+    width: 5.25rem;
     left: 50%;
-    margin-left: -0.05625rem;
+    margin-left: -1.125rem;
     transform-origin: 10% 0 0;
     animation-fill-mode: forwards;
     transform: rotateZ(-20deg);
-    top: -0.00625rem;
+    top: -0.125rem;
 }
 
 body .page .phonograph .disc_light {
     position: absolute;
-    width: 0.775rem;
-    margin-top: 0.19688rem;
+    width: 15.5rem;
+    margin-top: 3.9375rem;
     left: 50%;
-    margin-left: -0.3875rem;
+    margin-left: -7.75rem;
 }
 
 body .page .phonograph .disc {
     position: absolute;
-    width: 0.775rem;
-    margin-top: 0.19688rem;
+    width: 15.5rem;
+    margin-top: 3.9375rem;
     left: 50%;
-    margin-left: -0.3875rem;
+    margin-left: -7.75rem;
 }
 
 body .page .phonograph .cover {
-    width: 0.46875rem;
+    width: 9.375rem;
     position: absolute;
     left: 50%;
-    margin-top: 0.35rem;
-    margin-left: -0.23438rem;
+    margin-top: 7rem;
+    margin-left: -4.6875rem;
     border-radius: 50%;
 }
 
 body .page .song-information {
-    padding: 0 0.10938rem;
-    margin-top: 0.07813rem;
+    padding: 0 2.1875rem;
+    margin-top: 1.5625rem;
     position: absolute;
     text-align: center;
     color: #fefefe;
-    width: 1rem;
+    width: 20rem;
 }
 
 body .page .song-information .song-head {
     line-height: 1.1;
-    font-size: 0.04688rem;
+    font-size: 0.9375rem;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -164,21 +164,21 @@ body .page .song-information .song-head {
 }
 
 body .page .song-information .song-head .gap {
-    margin: 0 0.0125rem;
+    margin: 0 0.25rem;
 }
 
 body .page .song-information .song-head .author {
-    font-size: 0.04063rem;
+    font-size: 0.8125rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.6);
 }
 
 body .page .song-information .lyric {
-    margin-top: 0.04375rem;
-    font-size: 0.04063rem;
+    margin-top: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.6);
-    height: 0.18125rem;
+    height: 3.625rem;
     overflow: hidden;
 }
 
@@ -187,25 +187,25 @@ body .page .song-information .lyric .lyric-box {
 }
 
 body .page .song-information .lyric .lyric-box p {
-    height: 0.06rem;
-    padding-bottom: 0.01563rem;
+    height: 1.2rem;
+    padding-bottom: 0.3125rem;
 }
 
 body .page .footer {
     position: absolute;
-    bottom: 0.0625rem;
+    bottom: 1.25rem;
     display: flex;
-    padding: 0 0.10938rem;
+    padding: 0 2.1875rem;
 }
 
 body .page .footer span {
-    width: 0.37188rem;
-    height: 0.1125rem;
+    width: 7.4375rem;
+    height: 2.25rem;
     text-align: center;
     border: 1px solid #d43b32;
-    line-height: 0.10625rem;
-    border-radius: 0.0125rem;
-    font-size: 0.04688rem;
+    line-height: 2.125rem;
+    border-radius: 4px;
+    font-size: 0.9375rem;
 }
 
 body .page .footer .open {
@@ -215,5 +215,5 @@ body .page .footer .open {
 body .page .footer .download {
     background: #d43b32;
     color: #fff;
-    margin-left: 0.0375rem;
+    margin-left: 0.75rem;
 }
