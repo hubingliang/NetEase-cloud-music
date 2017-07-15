@@ -208,6 +208,7 @@ body .page .song-information .lyric .lyric-box {
 body .page .song-information .lyric .lyric-box p {
     height: 19.2px;
     padding-bottom: 5px;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 body .page .footer {
