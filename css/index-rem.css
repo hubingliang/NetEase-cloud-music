@@ -504,7 +504,6 @@ body .main .content li .hot-search .list {
 
 body .main .content li .hot-search .list .hot-item {
     position: relative;
-    width: 4.375rem;
     height: 2rem;
     display: inline-block;
     margin-right: 0.5rem;
