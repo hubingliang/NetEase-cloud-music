@@ -162,14 +162,34 @@ body .page .song-information .song-head {
     width: 100%;
 }
 
+body .page .song-information .song-head .name {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.1;
+    color: #fefefe;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 body .page .song-information .song-head .gap {
     margin: 0 4px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.1;
+    color: #fefefe;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 body .page .song-information .song-head .author {
     font-size: 13px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    line-height: 1.1;
+    white-space: nowrap;
 }
 
 body .page .song-information .lyric {
