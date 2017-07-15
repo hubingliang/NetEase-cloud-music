@@ -92,7 +92,7 @@
                          let $li = $(
                              `
                <li class="hot-item">
-                            <a class="link">${i.name}</a>
+                            <a class="link" href="./song.html?id=${i.id}">${i.name}</a>
                         </li>
 					`
                          )
