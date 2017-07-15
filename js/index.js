@@ -85,7 +85,20 @@
                      })
                  })
              } else if (index === '2') {
-                 return
+                 $.get('../songs.json').then(function(response) {
+                     $tabitem.attr('data-downloaded', 'yes')
+                     let items = response
+                     items.forEach(i => {
+                         let $li = $(
+                             `
+               <li class="hot-item">
+                            <a class="link">${i.name}</a>
+                        </li>
+					`
+                         )
+                         $('.list').append($li)
+                     })
+                 })
              }
          }, 500)
      })

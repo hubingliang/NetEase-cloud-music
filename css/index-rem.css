@@ -426,6 +426,110 @@ body .main .content li .hotbotton .hotview {
     padding-right: 0.875rem;
     background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJtMSAxbDEwIDEwLTEwIDEwIi8+PC9zdmc+) 100% no-repeat;
     background-size: 0.4375rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+body .main .content li .form {
+    padding: 0.9375rem 0.625rem;
+    position: relative;
+}
+
+body .main .content li .form .inputcover {
+    position: relative;
+    width: 100%;
+    height: 1.875rem;
+    padding: 0 1.875rem;
+    box-sizing: border-box;
+    background: #ebecec;
+    border-radius: 30px;
+}
+
+body .main .content li .form .inputcover .svg-search {
+    position: absolute;
+    left: 0;
+    top: 0.5625rem;
+    margin: 0 0.5rem;
+    vertical-align: middle;
+    width: 0.8125rem;
+    height: 0.8125rem;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNiAyNiI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSIjYzljOWNhIiBkPSJNMjUuMTgxLDIzLjUzNWwtMS40MTQsMS40MTRsLTcuMzE1LTcuMzE0CgkJQzE0LjcwOSwxOS4xMDcsMTIuNDYsMjAsMTAsMjBDNC40NzcsMjAsMCwxNS41MjMsMCwxMEMwLDQuNDc3LDQuNDc3LDAsMTAsMGM1LjUyMywwLDEwLDQuNDc3LDEwLDEwYzAsMi4zNDItMC44MTEsNC40OS0yLjE2LDYuMTk1CgkJTDI1LjE4MSwyMy41MzV6IE0xMCwyYy00LjQxOCwwLTgsMy41ODItOCw4czMuNTgyLDgsOCw4YzQuNDE4LDAsOC0zLjU4Miw4LThTMTQuNDE4LDIsMTAsMnoiLz48L3N2Zz4=);
+}
+
+body .main .content li .form .inputcover .input {
+    width: 100%;
+    height: 1.875rem;
+    line-height: 1.125rem;
+    background: transparent;
+    font-size: 0.875rem;
+    color: #333;
+    border: 0;
+}
+
+body .main .content li .form .inputcover .lable {
+    position: absolute;
+    left: 1.875rem;
+    top: 0.3125rem;
+    font-size: 0.875rem;
+    color: #c9c9c9;
+    background: transparent;
+    pointer-events: none;
+}
+
+body .main .content li .form:after {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    transform-origin: top left;
+    border: 0 solid rgba(0, 0, 0, 0.1);
+}
+
+body .main .content li .hot-search {
+    padding: 0.9375rem 0.625rem 0;
+}
+
+body .main .content li .hot-search .title {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    color: #666;
+}
+
+body .main .content li .hot-search .list {
+    margin: 0.625rem 0 0.4375rem;
+}
+
+body .main .content li .hot-search .list .hot-item {
+    position: relative;
+    width: 4.375rem;
+    height: 2rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0 0.875rem;
+    font-size: 0.875rem;
+    line-height: 2rem;
+    color: #333;
+}
+
+body .main .content li .hot-search .list .hot-item .link {
+    text-decoration: none;
+}
+
+body .main .content li .hot-search .list .hot-item:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0.625rem;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    border: 0 solid #d3d4da;
+    border-radius: 32px;
+    border-width: 1px;
 }
 
 body .main .content li .output {
