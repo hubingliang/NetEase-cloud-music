@@ -540,24 +540,35 @@ body .main .content li .output ul {
     height: 100%;
 }
 
-body .main .content li .output ul .items {
+body .main .content li .output ul a {
+    padding-left: 0.625rem;
+    display: block;
+    height: 3.4rem;
+    border: 0 solid rgba(0, 0, 0, 0.1);
+    border-bottom-width: 0.0625rem;
+    display: flex;
+    align-items: center;
+    margin-top: -0.0625rem;
+}
+
+body .main .content li .output ul a .items {
     display: flex;
     width: 100%;
 }
 
-body .main .content li .output ul .items .left {
+body .main .content li .output ul a .items .left {
     flex: 1;
     width: 15rem;
     white-space: nowrap;
 }
 
-body .main .content li .output ul .items .left .name {
+body .main .content li .output ul a .items .left .name {
     font-size: 1.0625rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-body .main .content li .output ul .items .left .author {
+body .main .content li .output ul a .items .left .author {
     color: #888;
     font-size: 0.75rem;
     overflow: hidden;
@@ -566,13 +577,13 @@ body .main .content li .output ul .items .left .author {
     white-space: nowrap;
 }
 
-body .main .content li .output ul .items .right {
+body .main .content li .output ul a .items .right {
     display: flex;
     align-items: center;
     padding: 0 0.625rem;
 }
 
-body .main .content li .output ul .items .right span {
+body .main .content li .output ul a .items .right span {
     display: flex;
     align-items: center;
     padding: 0 0.625rem;

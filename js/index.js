@@ -147,17 +147,66 @@
 
      function search(keyword) {
          return new Promise((resolve, reject) => {
-             var database = [
-                 { "id": 1, "name": "晚春", },
-                 { "id": 2, "name": "大石碎胸口", },
-                 { "id": 3, "name": "The Good The Bad And The Ugly", },
-                 { "id": 4, "name": "λ", },
-                 { "id": 5, "name": "Where Is My Mind", },
-                 { "id": 6, "name": "山海", },
-                 { "id": 7, "name": "下雨&董卓瑶&忽然(2014i/O版)", },
-                 { "id": 8, "name": "旧情人，我是时间的新欢", },
-                 { "id": 9, "name": "黄昏", },
-                 { "id": 10, "name": "California Dreaming (重庆森林)", }
+             var database = [{
+                     "id": 1,
+                     "name": "晚春",
+                     "author": "腰乐队",
+                     "album": "相见恨晚",
+                 },
+                 {
+                     "id": 2,
+                     "name": "大石碎胸口",
+                     "author": "万能青年旅店",
+                     "album": "万能青年旅店",
+                 },
+                 {
+                     "id": 3,
+                     "name": "The Good The Bad And The Ugly",
+                     "author": "Geoff Love",
+                     "album": "Great Western Themes",
+                 },
+                 {
+                     "id": 4,
+                     "name": "λ",
+                     "author": "尚先生",
+                     "album": "白日梦",
+                 },
+                 {
+                     "id": 5,
+                     "name": "Where Is My Mind",
+                     "author": "Pixies",
+                     "album": "Essential Soundtracks: The New Movie Collection",
+                 },
+                 {
+                     "id": 6,
+                     "name": "山海",
+                     "author": "草东没有派对",
+                     "album": "丑奴儿",
+                 },
+                 {
+                     "id": 7,
+                     "name": "下雨&董卓瑶&忽然(2014i/O版)",
+                     "author": "李志",
+                     "album": "i/O（2014 Live）",
+                 },
+                 {
+                     "id": 8,
+                     "name": "旧情人，我是时间的新欢",
+                     "author": "尧十三",
+                     "album": "飞船，宇航员",
+                 },
+                 {
+                     "id": 9,
+                     "name": "黄昏",
+                     "author": "Timbo Mehrstein Gypsy Jazz Ensemble ",
+                     "album": "Maré Tchavengé",
+                 },
+                 {
+                     "id": 10,
+                     "name": "California Dreaming (重庆森林)",
+                     "author": "The Papas/The Mamas",
+                     "album": "声光回忆",
+                 }
              ]
              let result = database.filter(function(item) {
                  return item.name.indexOf(keyword) >= 0
