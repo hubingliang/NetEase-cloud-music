@@ -393,7 +393,7 @@ body .main .content li .hotcontent a .items .left .author {
     font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 268px;
+    width: 240px;
     white-space: nowrap;
 }
 
@@ -412,6 +412,20 @@ body .main .content li .hotcontent a .items .right span {
     background: url(../images/s.png) no-repeat;
     background-position: -24px 0;
     background-size: 166px 97px;
+}
+
+body .main .content li .hotbotton {
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+}
+
+body .main .content li .hotbotton .hotview {
+    display: inline-block;
+    color: #999;
+    padding-right: 14px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJtMSAxbDEwIDEwLTEwIDEwIi8+PC9zdmc+) 100% no-repeat;
+    background-size: 7px 12px;
 }
 
 body .main .content li .output {

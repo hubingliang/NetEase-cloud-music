@@ -393,7 +393,7 @@ body .main .content li .hotcontent a .items .left .author {
     font-size: 0.75rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 16.75rem;
+    width: 15rem;
     white-space: nowrap;
 }
 
@@ -412,6 +412,20 @@ body .main .content li .hotcontent a .items .right span {
     background: url(../images/s.png) no-repeat;
     background-position: -1.5rem 0;
     background-size: 10.375rem 6.0625rem;
+}
+
+body .main .content li .hotbotton {
+    height: 3.4375rem;
+    line-height: 3.4375rem;
+    text-align: center;
+}
+
+body .main .content li .hotbotton .hotview {
+    display: inline-block;
+    color: #999;
+    padding-right: 0.875rem;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJtMSAxbDEwIDEwLTEwIDEwIi8+PC9zdmc+) 100% no-repeat;
+    background-size: 0.4375rem 0.75rem;
 }
 
 body .main .content li .output {
