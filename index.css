@@ -538,6 +538,7 @@ body .main .content li .hot-search .list .hot-item:after {
 
 body .main .content li .output {
     height: 20px;
+    font-size: 14px;
 }
 
 body .main .content li .output ul {
