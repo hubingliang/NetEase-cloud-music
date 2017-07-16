@@ -17,6 +17,7 @@ var gulp = require('gulp'),
     // 复制文件（文件拷贝）
     copy = require('gulp-copy');
 
+autoprefixer = require('gulp-autoprefixer');
 // 版本号
 var APP_VERSION = 'v.1.0';
 
@@ -42,6 +43,10 @@ gulp.task('css', function() {
         .pipe(cssnano())
         .pipe(concat('all.css'))
         // 3. 另存为压缩文件
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest('dist/css'))
 });
 
