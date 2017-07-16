@@ -9,6 +9,15 @@
     <link rel="shortcut icon" href="images/favicon.ico" />
     <script src="jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="css/all.css">
+    <script>
+        var width = document.documentElement.clientWidth
+        var css = `
+    html{
+      font-size: ${width}px;
+    }
+    `
+        document.write(`<style>${css}</style>`)
+    </script>
 
 </head>
 

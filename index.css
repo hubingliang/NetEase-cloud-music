@@ -433,7 +433,7 @@ body .main .content li .form {
     padding: 15px 10px;
     position: relative;
     border: 0 solid rgba(0, 0, 0, 0.1);
-    border-bottom-width: .0625rem;
+    border-bottom-width: 1px;
 }
 
 body .main .content li .form .inputcover {
@@ -493,7 +493,7 @@ body .main .content li .form:after {
 body .main .content li .hot-search {
     padding: 15px 10px 0;
     border: 0 solid rgba(0, 0, 0, 0.1);
-    border-bottom-width: .0625rem;
+    border-bottom-width: 1px;
 }
 
 body .main .content li .hot-search .title {
