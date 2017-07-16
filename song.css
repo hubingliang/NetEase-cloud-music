@@ -203,12 +203,12 @@ body .page .song-information .lyric {
 
 body .page .song-information .lyric .lyric-box {
     transition: transform 0.3s;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 body .page .song-information .lyric .lyric-box p {
     height: 19.2px;
     padding-bottom: 5px;
-    color: rgba(255, 255, 255, 0.6);
 }
 
 body .page .footer {
