@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    color: #333;
 }
 
 h2 {
@@ -42,6 +41,10 @@ a {
     height: 4px;
     transform: scaleY(0.5);
     background: #d33a31;
+}
+
+body {
+    color: #333;
 }
 
 body .top-bar {
